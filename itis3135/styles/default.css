@@ -1,0 +1,27 @@
+figure > img{
+    border: 0;
+    width: 300px; 
+    height: auto;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+.signature {
+    font-style: italic;
+}
+
+.title {
+    font-size: 30px;
+    font-family: 'Calibri' sans-serif;
+    font-weight: bold;
+}
+
+.topic {
+    font-weight: bold;
+}
+
+.description {
+    display: inline;
+}
