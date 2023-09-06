@@ -20,8 +20,41 @@ figcaption {
 
 .topic {
     font-weight: bold;
+    font-family: 'Calibri' sans-serif;
+    text-align: left;
+    word-wrap: normal;
 }
 
-.description {
-    display: inline;
+p.response {
+    font-family: 'Calibri' sans-serif;
+    text-align: justify;
+    border: auto;
+    margin: auto;
+    color: #69140E;
+}
+
+p.terms {
+    font-family: 'Calibri' sans-serif;
+    text-align: justify;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+body {
+    font-family: 'Calibri' sans-serif;
+    background-color: #D4F2D2;
+    color: #172A3A; 
+    text-align: center;
+    padding: auto;
+    border-bottom: 100px;
+}
+
+footer {
+    font-family: 'Calibri' sans-serif;
+    border-bottom: 200px;
+    padding: auto;
+}
+
+a {
+    color: #2D936C;
 }
