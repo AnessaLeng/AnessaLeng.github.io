@@ -40,6 +40,10 @@ p.terms {
     padding-left: 50px;
 }
 
+header, body {
+
+}
+
 body {
     font-family: 'Calibri' sans-serif;
     background-color: #D4F2D2;
