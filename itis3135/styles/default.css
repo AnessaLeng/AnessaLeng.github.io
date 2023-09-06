@@ -40,8 +40,9 @@ p.terms {
     padding-left: 50px;
 }
 
-header, body {
-
+header {
+    padding-top: none;
+    padding-bottom: 30px;
 }
 
 body {
@@ -49,16 +50,23 @@ body {
     background-color: #D4F2D2;
     color: #172A3A; 
     text-align: center;
-    padding: auto;
+    padding-top: 40px;
+    padding-bottom: 10px;
     border-bottom: 100px;
 }
 
 footer {
     font-family: 'Calibri' sans-serif;
     border-bottom: 200px;
-    padding: auto;
+    padding-top: 100px;
+    padding-bottom: none;
 }
 
 a {
     color: #2D936C;
+    text-decoration: none;
+}
+
+nav {
+    padding: auto;
 }
