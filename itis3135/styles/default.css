@@ -16,7 +16,7 @@ figcaption {
 
 .title {
     font-size: 30px;
-    font-family: 'Calibri' sans-serif;
+    font-family: 'sans-serif';
     font-weight: bold;
 }
 
@@ -27,14 +27,14 @@ figcaption {
 
 ul {
     text-align: left;
-    font-family: 'Calibri' sans-serif;
+    font-family: 'Calibri', sans-serif;
     border: auto;
     margin: auto;
     word-wrap: normal;
 }
 
 p.terms {
-    font-family: 'Calibri' sans-serif;
+    font-family: 'Calibri', sans-serif;
     text-align: justify;
     padding-right: 50px;
     padding-left: 50px;
@@ -43,10 +43,11 @@ p.terms {
 header {
     padding-top: none;
     padding-bottom: 30px;
+    font-family: 'sans-serif';
 }
 
 body {
-    font-family: 'Calibri' sans-serif;
+    font-family: 'Calibri', sans-serif;
     font-size: 15px;
     background-color: #D4F2D2;
     color: #172A3A; 
@@ -57,7 +58,7 @@ body {
 }
 
 footer {
-    font-family: 'Calibri' sans-serif;
+    font-family: 'Calibri', sans-serif;
     border-bottom: 200px;
     padding-top: 100px;
     padding-bottom: none;
