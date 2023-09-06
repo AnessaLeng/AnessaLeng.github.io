@@ -25,6 +25,10 @@ figcaption {
     text-align: left;
 }
 
+h2 {
+    font-size: 25px;
+}
+
 ul {
     text-align: left;
     font-family: 'Calibri', sans-serif;
@@ -48,7 +52,7 @@ header {
 
 body {
     font-family: 'Calibri', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     background-color: #D4F2D2;
     color: #172A3A; 
     text-align: center;
