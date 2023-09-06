@@ -6,6 +6,8 @@ figure > img{
 
 figcaption {
     font-style: italic;
+    padding-bottom: 15px;
+    padding-top: 5px;
 }
 
 .signature {
@@ -20,17 +22,15 @@ figcaption {
 
 .topic {
     font-weight: bold;
-    font-family: 'Calibri' sans-serif;
     text-align: left;
-    word-wrap: normal;
 }
 
-p.response {
+ul {
+    text-align: left;
     font-family: 'Calibri' sans-serif;
-    text-align: justify;
     border: auto;
     margin: auto;
-    color: #69140E;
+    word-wrap: normal;
 }
 
 p.terms {
