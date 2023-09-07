@@ -2,6 +2,7 @@ figure > img{
     border: 0;
     width: 300px; 
     height: auto;
+    position: relative;
 }
 
 figcaption {
@@ -23,6 +24,7 @@ figcaption {
 .topic {
     font-weight: bold;
     text-align: left;
+    position: relative;
 }
 
 h2 {
@@ -33,7 +35,7 @@ ul {
     text-align: left;
     font-family: 'Calibri', sans-serif;
     border: auto;
-    margin: auto;
+    margin: 0 auto;
     word-wrap: normal;
 }
 
@@ -42,6 +44,7 @@ p.terms {
     text-align: justify;
     padding-right: 50px;
     padding-left: 50px;
+    position: relative;
 }
 
 header {
@@ -53,7 +56,7 @@ header {
 body {
     font-family: 'Calibri', sans-serif;
     font-size: 18px;
-    background-color: #D4F2D2;
+    background: linear-gradient(#D4F2D2, #C9D2FC);
     color: #172A3A; 
     text-align: center;
     padding-top: 40px;
