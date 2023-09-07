@@ -1,14 +1,14 @@
-figure > img{
+figure img{
     border: 0;
     width: 300px; 
     height: auto;
     position: relative;
 }
 
-main figcaption {
+figcaption {
     font-style: italic;
     padding-bottom: 15px;
-    padding-top: 5px;
+    padding-top: 0px;
 }
 
 .signature {
@@ -31,7 +31,7 @@ h2 {
     font-size: 25px;
 }
 
-main ul {
+ul {
     text-align: left;
     font-family: 'Calibri', sans-serif;
     border: none;
