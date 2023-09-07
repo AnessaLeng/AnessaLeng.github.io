@@ -5,7 +5,7 @@ figure > img{
     position: relative;
 }
 
-figcaption {
+main figcaption {
     font-style: italic;
     padding-bottom: 15px;
     padding-top: 5px;
@@ -31,10 +31,10 @@ h2 {
     font-size: 25px;
 }
 
-ul {
+main ul {
     text-align: left;
     font-family: 'Calibri', sans-serif;
-    border: auto;
+    border: none;
     margin: 0 auto;
     word-wrap: normal;
 }
@@ -48,7 +48,7 @@ p.terms {
 }
 
 header {
-    padding-top: none;
+    padding-top: 0;
     padding-bottom: 30px;
     font-family: 'sans-serif';
 }
@@ -68,7 +68,7 @@ footer {
     font-family: 'Calibri', sans-serif;
     border-bottom: 200px;
     padding-top: 100px;
-    padding-bottom: none;
+    padding-bottom: 0;
 }
 
 a {
@@ -77,5 +77,5 @@ a {
 }
 
 nav {
-    padding: auto;
+    padding: 0;
 }
