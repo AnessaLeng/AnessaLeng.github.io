@@ -89,6 +89,7 @@ table tbody {
 
 figcaption#table-caption {
     text-align: left;
+    font-style: italic;
 }
 
 table tr:nth-child(odd) {
