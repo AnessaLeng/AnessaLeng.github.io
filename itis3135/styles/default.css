@@ -58,7 +58,7 @@ header {
 body {
     font-family: 'Calibri', sans-serif;
     font-size: 18px;
-    background: linear-gradient(#D4F2D2, #C9D2FC);
+    background: linear-gradient(hsl(0, 100%, 95%), #C9D2FC);
     background-attachment: fixed;
     color: #172A3A; 
     text-align: center;
@@ -75,7 +75,7 @@ footer {
 }
 
 a {
-    color: #2D936C;
+    color: #bc91d8;
     text-decoration: none;
 }
 
@@ -83,18 +83,36 @@ nav {
     padding: 0;
 }
 
-table tbody {
+table {
     text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: auto;
+    vertical-align: middle;
 }
 
 figcaption#table-caption {
-    text-align: left;
+    text-align: center;
     font-style: italic;
 }
 
 table tr:nth-child(odd) {
-    background-color: #cdd4f0;
+    background-color: #e2cce0;
 }
 table tr:nth-child(1) {
-    background-color: #b4bad4;
+    background-color: #e7c8e5;
 }
+
+th.rowspan {
+   transform: rotate(-90deg);
+   text-align: center;
+}
+
+tr span[class="total"] {
+    font-weight: normal;
+    overflow: hidden;
+}
+
