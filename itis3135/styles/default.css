@@ -1,11 +1,11 @@
-figure img{
+figure#image img{
     border: 0;
     width: 300px; 
     height: auto;
     position: relative;
 }
 
-figcaption {
+figcaption#image-caption {
     font-style: italic;
     font-family: 'serif', sans-serif !important;
     padding-bottom: 15px;
@@ -33,7 +33,7 @@ h2 {
     font-family: 'serif', sans-serif !important;
 }
 
-ul {
+ul, ol {
     text-align: left;
     font-family: 'Calibri', sans-serif;
     border: none;
@@ -81,4 +81,19 @@ a {
 
 nav {
     padding: 0;
+}
+
+table tbody {
+    text-align: left;
+}
+
+figcaption#table-caption {
+    text-align: left;
+}
+
+table tr:nth-child(odd) {
+    background-color: #cdd4f0;
+}
+table tr:nth-child(1) {
+    background-color: #b4bad4;
 }
