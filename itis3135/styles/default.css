@@ -33,11 +33,25 @@ h2 {
     font-family: 'serif', sans-serif !important;
 }
 
-ul, ol {
+ul {
     text-align: left;
     font-family: 'Calibri', sans-serif;
     border: none;
-    margin: 0 auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    word-wrap: normal;
+}
+
+ol {
+    text-align: left;
+    font-family: 'Calibri', sans-serif;
+    border: none;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 0;
+    margin-bottom: 0;
     word-wrap: normal;
 }
 
@@ -115,3 +129,35 @@ tr span[class="total"] {
     overflow: hidden;
 }
 
+label {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: left;
+}
+
+fieldset {
+    border: none;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 2rem 0;
+    font-size: 20px;
+    border-bottom: 3px solid #e2cce0;
+}
+
+input[type="submit"] {
+    display: block;
+    height: 2em;
+    font-size: 1.1rem;
+    width: 40%;
+    margin: auto;
+    background-color: #cfb3e2 !important;
+}
+
+input[type="reset"] {
+    display: block;
+    height: 2em;
+    font-size: 1.1rem;
+    width: 40%;
+    margin: auto;
+    background-color: #cfb3e2 !important;
+}
