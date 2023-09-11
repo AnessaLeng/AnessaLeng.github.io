@@ -107,7 +107,7 @@ table tr:nth-child(1) {
 }
 
 th.rowspan {
-   transform: rotate(-90deg);
+   
    text-align: center;
 }
 
