@@ -44,6 +44,10 @@ ul {
     word-wrap: normal;
 }
 
+ul li {
+    position:sticky;
+}
+
 ol {
     text-align: left;
     font-family: 'Tahoma', sans-serif;
