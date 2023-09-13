@@ -35,7 +35,7 @@ h2 {
 
 ul {
     text-align: left;
-    font-family: 'Calibri', sans-serif;
+    font-family: 'Tahoma', sans-serif;
     border: none;
     margin-left: 100px;
     margin-right: 100px;
@@ -46,7 +46,7 @@ ul {
 
 ol {
     text-align: left;
-    font-family: 'Calibri', sans-serif;
+    font-family: 'Tahoma', sans-serif;
     border: none;
     margin-left: 500px;
     margin-right: 200px;
@@ -56,7 +56,7 @@ ol {
 }
 
 p.terms {
-    font-family: 'Calibri', sans-serif;
+    font-family: 'Tahoma', sans-serif;
     text-align: justify;
     padding-right: 50px;
     padding-left: 50px;
@@ -68,13 +68,13 @@ p.terms {
 header {
     padding-top: 0;
     padding-bottom: 30px;
-    font-family: 'sans-serif';
+    font-family: 'Tahoma';
 }
 
 body {
-    font-family: 'Calibri', sans-serif;
+    font-family: 'Tahoma', sans-serif;
     font-size: 18px;
-    background: linear-gradient(hsl(0, 100%, 95%), #C9D2FC);
+    background: linear-gradient(#C9D2FC 50%, #BEA7E5);
     background-attachment: fixed;
     color: #172A3A; 
     text-align: center;
@@ -90,9 +90,10 @@ footer {
     padding-bottom: 0;
 }
 
-a {
-    color: #bc91d8;
+a, a:hover {
+    color: #607196;
     text-decoration: none;
+    text-shadow: slateblue;
 }
 
 nav {
