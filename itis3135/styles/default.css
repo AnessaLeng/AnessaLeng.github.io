@@ -146,20 +146,13 @@ fieldset {
     border-bottom: 3px solid #e2cce0;
 }
 
-input[type="submit"] {
-    display: block;
+input[type="submit"], input[type="reset"]{
+    display: inline-block;
     height: 2em;
     font-size: 1.1rem;
     width: 40%;
     margin: auto;
     background-color: #cfb3e2 !important;
-}
-
-input[type="reset"] {
-    display: block;
-    height: 2em;
-    font-size: 1.1rem;
-    width: 40%;
-    margin: auto;
-    background-color: #cfb3e2 !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
