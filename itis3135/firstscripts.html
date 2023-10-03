@@ -44,20 +44,19 @@
             var number = document.getElementById("number"); 
             function shape() 
             {
-                var number = parseFloat(number.value);
                 var shape;
 
-                if (number > 10.99) { shape = "big shape"; }
-                else if (number >= 10.00 && number <= 10.99) { shape = "decagon" }
-                else if (number >= 9.00 && number <= 9.99) { shape = "enneagon" }
-                else if (number >= 8.00 && number <= 8.99) { shape = "octagon" }
-                else if (number >= 7.00 && number <= 7.99) { shape = "heptagon" }
-                else if (number >= 6.00 && number <= 6.99) { shape = "hexagon" }
-                else if (number >= 5.00 && number <= 5.99) { shape = "pentagon" }                
-                else if (number >= 4.00 && number <= 4.99) { shape = "tetragon" }
-                else if (number >= 3.00 && number <= 3.99) { shape = "trigon" }
-                else if (number >= 2.00 && number <= 2.99) { shape = "digon" }
-                else if (number >= 1.00 && number <= 1.99) { shape = "henagon" }
+                if (number.value > 10.99) { shape = "big shape"; }
+                else if (number.value >= 10.00 && number.value <= 10.99) { shape = "decagon" }
+                else if (number.value >= 9.00 && number.value <= 9.99) { shape = "enneagon" }
+                else if (number.value >= 8.00 && number.value <= 8.99) { shape = "octagon" }
+                else if (number.value >= 7.00 && number.value <= 7.99) { shape = "heptagon" }
+                else if (number.value >= 6.00 && number.value <= 6.99) { shape = "hexagon" }
+                else if (number.value >= 5.00 && number.value <= 5.99) { shape = "pentagon" }                
+                else if (number.value >= 4.00 && number.value <= 4.99) { shape = "tetragon" }
+                else if (number.value >= 3.00 && number.value <= 3.99) { shape = "trigon" }
+                else if (number.value >= 2.00 && number.value <= 2.99) { shape = "digon" }
+                else if (number.value >= 1.00 && number.value <= 1.99) { shape = "henagon" }
                 else { shape = "circle" }
                 alert(shape);
             }
