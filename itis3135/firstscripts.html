@@ -25,6 +25,15 @@
                 <input type="submit" value="Enter" onclick="popUp()">
             </fieldset>
         </form>
+        <script>
+            var username = document.getElementById("username"); 
+            var emotion = document.getElementById("emotion"); 
+            function popUp() 
+            {
+                var companyName = "Leng Inc.";
+                alert(companyName + " welcomes you, " + username.value + "!\nWe're glad you are doing " + emotion.value + ".");
+            }
+        </script>    
         <form>
             <fieldset>
                 <div>What is your favorite number from 0-10? <input type="number" id="number" min="0" max="10.99" required></div>
@@ -32,16 +41,7 @@
             </fieldset>
         </form>
         <script>
-            var username = document.getElementById("username"); 
-            var emotion = document.getElementById("emotion"); 
             var number = document.getElementById(number); 
-            
-            function popUp() 
-            {
-                var companyName = "Leng Inc.";
-                alert(companyName + " welcomes you, " + username.value + "!\nWe're glad you are doing " + emotion.value + ".");
-            }
-
             function shape() 
             {
                 var number = parseFloat(number.value);
