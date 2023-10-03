@@ -18,31 +18,31 @@
                 document.write(today.toDateString());
             </script>
         </h3>
-        <form method="get" action="#">
+        <form id="firstscriptsForm">
             <fieldset>
                 <div>What is your name? <input type="text" id="username" required></div>
                 <div>How are you feeling? <input type="text" id="emotion" required></div>
-                <button type="button" value="Enter" onclick="popUp()"></button>
+                <input type="submit" value="Enter" onclick="popUp()">
             </fieldset>
             <fieldset>
-                <div>What is your favorite number from 0-10? <input type="text" id="number" min="0" max="10.99" required></div>
-                <button type="button" value="Enter" onclick="shape()"></button>
+                <div>What is your favorite number from 0-10? <input type="number" id="number" min="0" max="10.99" required></div>
+                <input type="submit" value="Enter" onclick="shape()">
             </fieldset>
         </form>
         <script>
-            var username = form.getElementById(username); 
-            var emotion = form.getElementById(emotion); 
+            var username = form.getElementById("username"); 
+            var emotion = form.getElementById("emotion"); 
             var number = form.getElementById(number); 
             
             function popUp() 
             {
                 var companyName = "Leng Inc.";
-                alert(companyName + " welcomes you, " + username() + "!\nWe're glad you are doing " + emotion() + ".");
+                alert(companyName + " welcomes you, " + username + "!\nWe're glad you are doing " + emotion + ".");
             }
 
             function shape() 
             {
-                var number = firstscripts.html.getElementById(number);
+                var number = parseFloat(number);
                 var shape;
 
                 if (number > 10.99) { shape = "big shape"; }
