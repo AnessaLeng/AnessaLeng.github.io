@@ -18,15 +18,15 @@
                 document.write(today.toDateString());
             </script>
         </h3>
-        <form>
+        <form method="get" action="#">
             <fieldset>
                 <div>What is your name? <input type="text" id="username" required></div>
                 <div>How are you feeling? <input type="text" id="emotion" required></div>
-                <input type="button" value="Enter" onclick="popUp()">
+                <button type="button" value="Enter" onclick="popUp()"></button>
             </fieldset>
             <fieldset>
                 <div>What is your favorite number from 0-10? <input type="text" id="number" min="0" max="10.99" required></div>
-                <input type="button" value="Enter" onclick="shape()">
+                <button type="button" value="Enter" onclick="shape()"></button>
             </fieldset>
         </form>
         <script>
