@@ -4,18 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/default.css">
-    <link rel="" href="scripts/defaultscripts.js">
     <script src="scripts/defaultscripts.js"></script>
-    <button onclick="scriptTest();"></button>
     <title>Anessa Leng's Amber Lion || ITIS 3135 || First Scripts</title>
 </head>
 <body>
     <div data-include="components/header.html"></div>
     <main>
         <h2>First Scripts</h2>
-        <h3>Today is </h3>
-        <form>
-
+        <h3>
+            <script>
+                var today = new Date();
+                document.write("Today is " + today.toLocaleTimeString() + " on ");
+                document.write(today.toDateString());
+            </script>
+        </h3>
+        <form method="post" action="#">
+            <fieldset>
+                <label for="username">What's your name?
+                    <input id="username" type="text" required>
+                </label>
+                <label for="emotion">How are you feeling?
+                    <input id="emotion" type="text" required>
+                </label>
+            </fieldset>
+            <fieldset>
+                <input type="submit" value="Submit" onclick="popUp();">
+            </fieldset>
+            <fieldset>
+                <label for="number">What's your favorite number from 0-10?
+                    <input id="number" type="number" required>
+                </label>
+            </fieldset>
+            <fieldset>
+                <input type="submit" value="Submit" onclick="shape();">
+            </fieldset>
         </form>
     </main>
     <div data-include="components/footer.html"></div>
