@@ -88,3 +88,7 @@ function
 {
     
 }
+
+const input = firstscripts.html.createElement('input');
+input.setAttribute('type', 'text');
+input.setAttribute('id', 'username');
