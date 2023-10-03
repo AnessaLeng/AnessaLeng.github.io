@@ -18,27 +18,19 @@
                 document.write(today.toDateString());
             </script>
         </h3>
-        <form>
-            <fieldset>
-                <label for="username">What's your name?
-                    <input id="username" type="text" required>
-                </label>
-                <label for="emotion">How are you feeling?
-                    <input id="emotion" type="text" required>
-                </label>
-            </fieldset>
-            <fieldset>
-                <input type="submit" value="Submit" onclick="popUp();">
-            </fieldset>
-            <fieldset>
-                <label for="number">What's your favorite number from 0-10?
-                    <input id="number" type="number" min="0.00" max="10.99" required>
-                </label>
-            </fieldset>
-            <fieldset>
-                <input type="submit" value="Submit" onclick="shape();">
-            </fieldset>
-        </form>
+        <p>
+            <script>
+                var companyName = "Leng Inc.";
+                prompt("What's your name?");
+                var username = prompt("What's your name?");
+                prompt("How are you feeling?");
+                var emotion = prompt("How are you feeling?");
+                alert(companyName + " welcomes you, " + username + "!\nWe're glad you are doing " + emotion + ".");
+                prompt("What's your favorite number from 0-10?");
+                var shape = prompt("What's your favorite number from 0-10?");
+                alert(shape);
+            </script>
+        </p>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.js"></script>
