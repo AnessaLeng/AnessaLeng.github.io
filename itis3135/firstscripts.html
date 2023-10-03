@@ -36,12 +36,14 @@
         </script>    
         <form>
             <fieldset>
-                <div>What is your favorite number from 0-10? <input type="number" id="number" min="0" max="10.99" required></div>
+                <div>What is your favorite number from 0-10? <input type="number" id="number" max="10.99" required></div>
                 <input type="submit" value="Enter" onclick="shape()">
             </fieldset>
         </form>
         <script>
-            var number = document.getElementById("number"); 
+            var number = document.getElementById("number");
+            Math.abs(number.value);
+            
             function shape() 
             {
                 var shape;
