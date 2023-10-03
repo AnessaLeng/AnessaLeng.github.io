@@ -24,6 +24,8 @@
                 <div>How are you feeling? <input type="text" id="emotion" required></div>
                 <input type="submit" value="Enter" onclick="popUp()">
             </fieldset>
+        </form>
+        <form>
             <fieldset>
                 <div>What is your favorite number from 0-10? <input type="number" id="number" min="0" max="10.99" required></div>
                 <input type="submit" value="Enter" onclick="shape()">
@@ -37,12 +39,12 @@
             function popUp() 
             {
                 var companyName = "Leng Inc.";
-                alert(companyName + " welcomes you, " + username + "!\nWe're glad you are doing " + emotion + ".");
+                alert(companyName + " welcomes you, " + username.value + "!\nWe're glad you are doing " + emotion.value + ".");
             }
 
             function shape() 
             {
-                var number = parseFloat(number);
+                var number = parseFloat(number.value);
                 var shape;
 
                 if (number > 10.99) { shape = "big shape"; }
