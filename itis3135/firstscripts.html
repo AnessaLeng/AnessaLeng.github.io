@@ -41,11 +41,15 @@
             </fieldset>
         </form>
         <script>
-            var number = document.getElementById("number");
-            Math.abs(number.value);
-            
+            var number = document.getElementById("number");            
+            function absolute() 
+            {
+                number.value = Math.abs(number.value);
+            }
+
             function shape() 
             {
+                absolute();
                 var shape;
 
                 if (number.value > 10.99) { shape = "big shape"; }
