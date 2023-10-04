@@ -18,7 +18,7 @@
                 document.write(today.toDateString());
             </script>
         </h3>
-        <form id="firstscriptsForm">
+        <form id="greeting">
             <fieldset>
                 <div>What is your name? <input type="text" id="username" required></div>
                 <div>How are you feeling? <input type="text" id="emotion" required></div>
@@ -26,32 +26,24 @@
             </fieldset>
         </form>
         <script>
-            var username = document.getElementById("username"); 
-            var emotion = document.getElementById("emotion"); 
             function popUp() 
             {
                 var companyName = "Leng Inc.";
                 alert(companyName + " welcomes you, " + username.value + "!\nWe're glad you are doing " + emotion.value + ".");
             }
         </script>    
-        <form>
+        <form id="shape">
             <fieldset>
                 <div>What is your favorite number from 0-10? <input type="number" id="number" max="10.99" required></div>
                 <input type="submit" value="Enter" onclick="shape()">
             </fieldset>
         </form>
-        <script>
-            var number = document.getElementById("number");            
-            function absolute() 
-            {
-                number.value = Math.abs(number.value);
-            }
-
+        <script>        
+            function absolute() { number.value = Math.abs(number.value); }
             function shape() 
             {
                 absolute();
                 var shape;
-
                 if (number.value > 10.99) { shape = "big shape"; }
                 else if (number.value >= 10.00 && number.value <= 10.99) { shape = "decagon" }
                 else if (number.value >= 9.00 && number.value <= 9.99) { shape = "enneagon" }
@@ -66,7 +58,41 @@
                 else { shape = "circle" }
                 alert(shape);
             }
-        </script>        
+        </script>  
+        <form id="functions">
+            <fieldset>
+                <div>Enter a number: <input type="number" id="number1" required></div>
+                <div>Enter a number: <input type="number" id="number2" required></div>
+                <input type="submit" value="Sum" onclick="sum()">
+                <input type="submit" value="Product" onclick="product()">
+                <input type="submit" value="Quotient" onclick="quotient()">
+                <input type="submit" value="Modulo" onclick="modulo()">  
+            </fieldset>
+        </form>   
+        <script>
+            function sum()
+            {
+                var numberOne = parseInt(number1.value);
+                var numberTwo = parseInt(number2.value);
+                var sum = numberOne + numberTwo;
+                alert(sum);
+            }
+            function product()
+            {
+                var product = number1.value * number2.value;
+                alert(product);
+            }
+            function quotient()
+            {
+                var quotient = number1.value / number2.value;
+                alert(quotient);
+            }
+            function modulo()
+            {
+                var modulo = number1.value % number2.value;
+                alert(modulo);
+            }
+        </script>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.js"></script>
