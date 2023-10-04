@@ -48,8 +48,11 @@ ol {
     text-align: left;
     font-family: 'Tahoma', sans-serif;
     border: none;
+    text-justify: auto;
     margin-right: 200px;
     margin-left: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
     word-wrap: normal;
 }
 
