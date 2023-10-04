@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/default.css">
-    <script src="scripts/defaultscripts.js"></script>
+    <script src="scripts/survey.js"></script>
     <title>Anessa Leng's Amber Lion || ITIS 3135 || BYO Introduction</title>
 </head>
 <body>
@@ -12,14 +12,68 @@
     <main>
         <h2>BYO Introduction</h2>
         <h3>Time to BYO Introduction page, please fill out the form below so we can create your own page.</h3>
-        <form method="post" action="#">
+        <form id="byo-introduciton" method="post" action="#" onsubmit="submit()">
+            <p>* indicates the required fields</p>
             <fieldset>
-                <label for="name">Name:
-                    <input id="name" type="text" placeholder="Anessa Leng" required>
+                <label for="username">*Name:
+                    <input id="username" type="text" placeholder="Anessa Leng" required>
                 </label>
-                <label for="mascot">Mascot:
+                <label for="mascot">*Mascot:
                     <input id="mascot" type="text" placeholder="Amber Lion" required>
                 </label>
+            </fieldset>
+            <fieldset>
+                <label for="image">*Upload your image:
+                    <input id="image" type="file" required>
+                </label>
+                <label for="image-caption">*Caption:
+                    <input id="image-caption" type="text" required>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="personal-background">*Personal Background:
+                    <input id="personal-background" type="text" required>
+                </label>
+                <label for="professional-background">*Professional Background:
+                    <input id="professional-background" type="text" required>
+                </label>
+                <label for="academic-background">*Academic Background:
+                    <input id="academic-background" type="text" required>
+                </label>
+                <label for="background-in-web-development">*Background in Web Development:
+                    <input id="background-in-web-development" type="text" placeholder="No previous experience in web development." required>
+                </label>
+                <label for="platform">*Primary Computer Platform:
+                    <input id="platform" type="text" placeholder="Windows 11" required>
+                </label>
+            </fieldset>
+            <fieldset>
+                <p>*Current Courses:</p>
+                <label for="courses">Course and description:
+                    <input id="courses" type="textbox" required>
+                </label>
+                <input type="button" value="Add Course" onclick="addCourse()">
+                <input type="button" value="Delete Course" onclick="deleteCourse()">
+            </fieldset>
+            <fieldset>
+                <label for="funny-thing">Funny thing:
+                    <input id="funny-thing" type="text">
+                </label>
+                <label for="anything-else">Anything else:
+                    <input id="anything-else" type="text">
+                </label>
+            </fieldset>
+            <fieldset>
+                <input id="agree-checkbox" type="checkbox" required>
+                <p>
+                    "I understand that what is on this page is not password 
+                    protected and I will not put anything here that I do not 
+                    want publicly available."   
+                </p>
+            </fieldset>
+            <fieldset>
+                <input type="reset" value="Reset" onclick="reset()">
+                <input type="submit" value="Submit" onclick="validateFields()">
             </fieldset>
         </form>
     </main>
