@@ -49,8 +49,8 @@ ol {
     font-family: 'Tahoma', sans-serif;
     border: none;
     text-justify: auto;
-    margin-right: 300px;
-    margin-left: 400px;
+    margin-right: 50%;
+    margin-left: 50%;
     margin-top: auto;
     margin-bottom: auto;
     word-wrap: normal;
