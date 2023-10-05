@@ -54,5 +54,17 @@ function deleteCourse() {
 
 function submit() {
     validateFields();
-    document.write();
+    const username = document.getElementById('username');
+    const mascot = document.getElementById('mascot');
+    const image;
+    const image-caption;
+    const personal-background;
+    const professional-background;
+    const academic-background;
+    var h3 = document.createElement("h3");
+    h3.textContent(username);
+    
+    h3.textContent(mascot);
+
+    
 }
