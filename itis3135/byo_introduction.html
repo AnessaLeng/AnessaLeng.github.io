@@ -24,7 +24,7 @@
             </fieldset>
             <fieldset>
                 <label for="image">*Upload your image:
-                    <input id="image" type="file" required>
+                    <input id="image" type="file" placeholder="/itis3135/images/intro-chinatown-ny.jpg" required>
                 </label>
                 <label for="image-caption">*Caption:
                     <input id="image-caption" type="text" placeholder="Chinatown, NY" required>
@@ -56,8 +56,8 @@
                 <p>Enter the course number and a short description.</p>
                 <ul>
                     <li value="0"><input id="courses" type="text" placeholder="ITIS3200 - Intro to Security and Privacy: It is required for my degree and concentration." required>
-                    <input type="button" value="Add Course" onclick="addCourse()">
-                    <input type="button" value="Delete Course" onclick="deleteCourse()">
+                    <button type="button" onclick="addCourse()">Add Course</button>
+                    <button type="button" onclick="deleteCourse()">Delete Course</button>
                 </ul>
                 </label>
             </fieldset>

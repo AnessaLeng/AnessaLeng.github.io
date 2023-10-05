@@ -56,15 +56,22 @@ function submit() {
     validateFields();
     const username = document.getElementById('username');
     const mascot = document.getElementById('mascot');
-    const image;
-    const image-caption;
-    const personal-background;
-    const professional-background;
-    const academic-background;
-    var h3 = document.createElement("h3");
+    const image = document.getElementById('image');
+    const image_caption = document.getElementById('image-caption');
+    const personal_background = document.getElementById('personal-background');
+    const professional_background = document.getElementById('professional-background');
+    const academic_background = document.getElementById('academic-background');
+    var h3 = document.createElement('h3');
+    var figure = document.createElement('figure');
+    var figure_caption = document.createElement('figure-caption');
+    var ul = document.createElement('ul');
+    var li = document.createElement('li');
     h3.textContent(username);
-    
     h3.textContent(mascot);
-
+    figure.src = "./images/intro-chinatown-ny.jpg";
+    figure_caption.textContent(image_caption);
+    li.textContent(personal_background);
+    li.textContent(professional_background);
+    li.textContent(academic_background);
     
 }
