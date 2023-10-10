@@ -12,7 +12,7 @@ function validateFields() {
 }
 
 function reset() {
-    
+    document.getElementById('byo-introduction').reset();
 }
 
 function addCourse() {
@@ -21,28 +21,8 @@ function addCourse() {
     var input = document.createElement("input");
     li.setAttribute("value", count)
     input.setAttribute("type", "text");
+    input.setAttribute("textContent", "ITSC2181 - Intro to Computer Systems: It is required for my degree.");
 
-    if (count == 1)
-    {
-        input.textContent = "ITSC2181 - Intro to Computer Systems: It is required for my degree.";
-    }
-    else if (count == 2) 
-    {
-        input.textContent = "STAT2122 - Intro to Probability and Statistics: Unfortunately, I need this for my degree.";
-    }
-    else if (count == 3)
-    {
-        input.textContent = "ITSC3146 - Intro to Operating Systems and Networking: It is required for my degree.";
-    }
-    else if (count = 4)
-    {
-        input.textContent = "ITIS3135 - Web App Design and Development: It is required for my degree, but I am also thrilled to learn more about this subject.";
-    }
-    else 
-    {
-        input.textContent = "Course Number - Course Name: Description.";
-    }
-    count++;
     document.body.appendChild(li);
     document.body.appendChild(input);
 }
@@ -53,7 +33,7 @@ function deleteCourse() {
 }
 
 function submit() {
-    validateFields();
+    if (!validateFields()) { return; }
     const username = document.getElementById('username');
     const mascot = document.getElementById('mascot');
     const image = document.getElementById('image');
@@ -73,5 +53,6 @@ function submit() {
     li.textContent(personal_background);
     li.textContent(professional_background);
     li.textContent(academic_background);
-    
+
+    document.getElementById('byo-introduction').style.display = 'none';    
 }
