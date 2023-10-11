@@ -16,15 +16,15 @@ function reset() {
 }
 
 function addCourse() {
-    var count = 1;
+    var form = document.getElementById('byo-introduction');
     var li = document.createElement("li");
     var input = document.createElement("input");
-    li.setAttribute("value", count)
     input.setAttribute("type", "text");
-    input.setAttribute("textContent", "ITSC2181 - Intro to Computer Systems: It is required for my degree.");
-
+    input.setAttribute("value", "ITSC2181 - Intro to Computer Systems: It is required for my degree.");
+    form.insertBefore(input, form.childNodes[1]);
     document.body.appendChild(li);
     document.body.appendChild(input);
+
 }
 
 function deleteCourse() {
