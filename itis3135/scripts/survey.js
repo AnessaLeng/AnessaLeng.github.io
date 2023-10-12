@@ -21,10 +21,8 @@ function addCourse() {
     var input = document.createElement("input");
     input.setAttribute("type", "text");
     input.setAttribute("value", "ITSC2181 - Intro to Computer Systems: It is required for my degree.");
-    form.insertBefore(input, form.childNodes[1]);
-    document.body.appendChild(li);
-    document.body.appendChild(input);
-
+    form.appendChild(li);
+    form.appendChild(input);
 }
 
 function deleteCourse() {
