@@ -165,7 +165,7 @@ input[type="submit"], input[type="reset"]{
         background: linear-gradient(#C9D2FC 50%, #BEA7E5);
         background-attachment: fixed;
         color: #172A3A; 
-        text-align: left;
+        text-align: center;
         padding-top: 5px;
         padding-bottom: 5px;
         border-bottom: 10px;
