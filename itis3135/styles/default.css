@@ -206,11 +206,11 @@ input[type="submit"], input[type="reset"]{
 
     table {
         text-align: left;
-        display: block;
         margin-top: 0;
         margin-bottom: 0;
         margin-left: 2px;
         margin-right: 2px;
-        white-space: nowrap;
+        vertical-align: middle;
+        overflow-wrap:break-word;
     }
 }
