@@ -53,11 +53,11 @@
             </fieldset>
             <fieldset>
                 <label for="courses">*Current Courses:
-                <p>Enter the course number and a short description.</p>
                 <ul>
-                    <li><input id="courses" type="text" value="ITIS3200 - Intro to Security and Privacy: It is required for my degree and concentration." required>
-                    <button type="button" value="Add" onclick="addCourse()">Add Course</button>
-                    <button type="button" value="Delete" onclick="deleteCourse()">Delete Course</button>
+                    <li>Course ID: <input id="course-id" type="text" value="ITIS3200 - Intro to Security and Privacy">
+                    <li>Course Description: <input id="course-description" type="text" value="It is required for my degree and concentration.">
+                    <input type="button" value="Add Course" onclick="addCourses()">
+                    <input type="button" value="Delete Course" onclick="deleteCourse()">
                 </ul>
                 </label>
             </fieldset>

@@ -15,14 +15,18 @@ function reset() {
     document.getElementById('byo-introduction').reset();
 }
 
-function addCourse() {
-    var form = document.getElementById('byo-introduction');
-    var li = document.createElement("li");
-    var input = document.createElement("input");
+function addCourses() {
+    /*var courses = {};
+    var courseID = document.getElementById('course-id').value;
+    var courseDescription = document.getElementById('course-description').value;
+    courses[courseID] = courseDescription; */
+    var li = document.createElement('li');
+    var input = document.createElement('input');
     input.setAttribute("type", "text");
     input.setAttribute("value", "ITSC2181 - Intro to Computer Systems: It is required for my degree.");
+    var form = document.getElementById('byo-introduction');
+    li.appendChild(input);
     form.appendChild(li);
-    form.appendChild(input);
 }
 
 function deleteCourse() {
