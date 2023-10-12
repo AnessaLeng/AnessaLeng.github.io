@@ -212,6 +212,6 @@ input[type="submit"], input[type="reset"]{
         margin-right: 2px;
         vertical-align: middle;
         overflow-wrap:break-word;
-        table-layout: fixed;
+        table-layout: auto;
     }
 }
