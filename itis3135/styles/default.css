@@ -193,4 +193,14 @@ input[type="submit"], input[type="reset"]{
         margin-bottom: auto;
         word-wrap: normal;
     }
+
+    p.terms {
+        font-family: 'Tahoma', sans-serif;
+        text-align: justify;
+        padding-right: 1px;
+        padding-left: 1px;
+        position: relative;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
 }
