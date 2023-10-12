@@ -159,7 +159,7 @@ input[type="submit"], input[type="reset"]{
 }
 
 @media (min-width: 576px) {
-    body::content {
+    body {
         font-family: 'Tahoma', sans-serif;
         font-size: 18px;
         background: linear-gradient(#C9D2FC 50%, #BEA7E5);
