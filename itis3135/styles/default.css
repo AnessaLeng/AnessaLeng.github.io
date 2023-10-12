@@ -210,7 +210,9 @@ input[type="submit"], input[type="reset"]{
         margin-bottom: 0;
         margin-left: 2px;
         margin-right: 2px;
+        width: 100%;
         vertical-align: middle;
+        table-layout: fixed;
         overflow-wrap:break-word;
     }
 }
