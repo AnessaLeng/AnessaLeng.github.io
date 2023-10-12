@@ -206,11 +206,9 @@ input[type="submit"], input[type="reset"]{
 
     table {
         text-align: left;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: 2px;
-        margin-right: 2px;
+        margin: 0;
         width: 100%;
+        height: 100%;
         vertical-align: middle;
         table-layout: fixed;
         overflow-wrap:break-word;
