@@ -12,7 +12,7 @@
     <main>
         <h2>BYO Introduction</h2>
         <h3>Time to BYO Introduction page, please fill out the form below so we can create your own page.</h3>
-        <form id="byo-introduciton" method="post" action="#" onsubmit="submit()">
+        <form id="byo-introduction" method="post" action="#" onsubmit="submit()">
             <p>* indicates the required fields</p>
             <fieldset>
                 <label for="username">*Name:
@@ -23,11 +23,11 @@
                 </label>
             </fieldset>
             <fieldset>
-                <label for="image">*Upload your image:
-                    <input id="image" type="file" value="/itis3135/images/intro-chinatown-ny.jpg" required>
+                <label for="image">Upload your image:
+                    <input id="image" type="file" value="/itis3135/images/intro-chinatown-ny.jpg">
                 </label>
-                <label for="image-caption">*Caption:
-                    <input id="image-caption" type="text" value="Chinatown, NY" required>
+                <label for="image-caption">Caption:
+                    <input id="image-caption" type="text" value="Chinatown, NY">
                 </label>
             </fieldset>
             <fieldset>
@@ -53,9 +53,10 @@
             </fieldset>
             <fieldset>
                 <label for="courses">*Current Courses:
-                <ul>
-                    <li>Course ID: <input id="course-id" type="text" value="ITIS3200 - Intro to Security and Privacy">
-                    <li>Course Description: <input id="course-description" type="text" value="It is required for my degree and concentration.">
+                    <p>Course ID : Reason for taking</p>
+                <ul id="courses">
+                    <li><input id="course-id" type="text" value="ITIS3200 - Intro to Security and Privacy" required> :
+                        <input id="course-reason" type="text" value="It is required for my degree and concentration." required>
                     <input type="button" value="Add Course" onclick="addCourses()">
                     <input type="button" value="Delete Course" onclick="deleteCourse()">
                 </ul>
@@ -78,9 +79,32 @@
             </fieldset>
             <fieldset>
                 <input type="reset" value="Reset" onclick="reset()">
-                <input type="submit" value="Submit" onclick="validateFields()">
+                <input type="submit" value="Submit" onclick="submit()">
             </fieldset>
         </form>
+        <div id="byo-intro" style="display: none;">
+            <h2>BYO Introduction</h2>
+            <h2 id="intro-username"></h2><h2 id="intro-mascot"></h2>
+            <figure id="intro-image"><img src=""></figure>
+            <figcaption id="intro-image-caption"><p></p></figcaption>
+            <ul>
+                <li><span class="topic">Personal Background: <p id="intro-personal-background"></p></span>
+                <li><span class="topic">Professional Background: <p id="intro-professional-background"></p></span> 
+                <li><span class="topic">Academic Background: <p id="intro-academic-background"></p></span> 
+                <li><span class="topic">Background in this Subject: <p id="intro-backgroun-in-web-development"></p></span>
+                <li><span class="topic">Primary Computer Platform: <p id="intro-platform"></p></span>
+                <li><span class="topic">Courses I am Taking and Why: </span>
+                    <ul>
+                        <li><span class="topic"></span>
+                        <li><span class="topic"></span> 
+                        <li><span class="topic"></span>
+                        <li><span class="topic"></span>
+                        <li><span class="topic"></span>
+                    </ul>
+                <li><span class="topic">Funny thing: <p id="intro-funny-thing"></p></span>
+                <li><span class="topic">Anything else: <p id="intro-anything-else"></p></span>
+            </ul>
+        </div>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.js"></script>
