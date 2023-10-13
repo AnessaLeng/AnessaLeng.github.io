@@ -44,10 +44,7 @@ function submit() {
     var username = document.getElementById('username').value;
     var mascot = document.getElementById('mascot').value;
     
-    var image = document.getElementById('image').value;
-    var reader = new FileReader();
-    reader.readAsText(image);
-
+    var image = document.getElementById('image').files[0];
     var image_caption = document.getElementById('image-caption').value;
     var personal_background = document.getElementById('personal-background').value;
     var professional_background = document.getElementById('professional-background').value;
@@ -68,14 +65,14 @@ function submit() {
     document.getElementById('intro-personal-background').textContent = personal_background;
     document.getElementById('intro-professional-background').textContent = professional_background;
     document.getElementById('intro-academic-background').textContent = academic_background;
-    document.getElementById('intro-backgroun-in-web-development').textContent = background_in_web_development;
+    document.getElementById('intro-background-in-web-development').textContent = background_in_web_development;
     document.getElementById('intro-platform').textContent = platform;
-
-    /*for (var i = 0; i < courses.length; i++) {
+    document.getElementById('intro-courses').textContent = course;
+    for (var i = 0; i < courses.length; i++) {
         var li = document.createElement('li');
         li.textContent = courses[i].id + " : " + courses[i].description;
-        li.appendChild(li);
-    }*/
+        ul.appendChild(li);
+    }
 
     document.getElementById('intro-funny-thing').textContent = funny_thing;
     document.getElementById('intro-anything-else').textContent = anything_else;
