@@ -23,11 +23,15 @@
                 </label>
             </fieldset>
             <fieldset>
-                <label for="image">Upload your image:
-                    <input id="image" type="file" value="/itis3135/images/intro-chinatown-ny.jpg">
+                <label for="image">*Upload your image:
+                    <input id="image" type="file" value="/itis3135/images/intro-chinatown-ny.jpg" required>
+                    <button type="button" onclick="loadImage()">Click here to load</button>
                 </label>
-                <label for="image-caption">Caption:
-                    <input id="image-caption" type="text" value="Chinatown, NY">
+                <div id="loadImage">
+
+                </div>
+                <label for="image-caption">*Caption:
+                    <input id="image-caption" type="text" value="Chinatown, NY" required>
                 </label>
             </fieldset>
             <fieldset>

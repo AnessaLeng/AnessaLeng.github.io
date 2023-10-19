@@ -1,6 +1,13 @@
 var original = document.body.innerHTML;
 var courses = [];
 
+function loadImage() {
+    var image = document.getElementById('image').files[0];
+    const imageURL = URL.createObjectURL('image');
+    var text = "<div src=\"" + imageURL + "\>";
+    document.getElementById('image').innerHTML = text;
+}
+
 function validateFields() {
     var form = document.getElementById('byo-introduction');
     for (var i = 0; i < form.elements.length; i++) 
