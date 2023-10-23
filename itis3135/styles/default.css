@@ -148,6 +148,11 @@ fieldset {
     border-bottom: 3px solid #e2cce0;
 }
 
+textarea {
+    margin-left: 0;  
+    font-family: 'Tahoma', 'sans-serif';  
+}
+
 input[type="submit"], input[type="reset"]{
     display: inline-block;
     height: 2em;

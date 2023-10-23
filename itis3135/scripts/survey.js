@@ -2,10 +2,16 @@ var original = document.body.innerHTML;
 var courses = [];
 
 function loadImage() {
-    var image = document.getElementById('image').files[0];
-    const imageURL = URL.createObjectURL('image');
-    var text = "<div src=\"" + imageURL + "\>";
-    document.getElementById('image').innerHTML = text;
+    var input = document.getElementById('image');
+    var file = input.files[0];
+    if (file) {
+        var imageURL = URL.createObjectURL(file);
+        document.getElementById('preview').src = imageURL;
+    }
+    else {
+        var defaultimageURL = "images/intro-chinatown-ny.jpg";
+        document.getElementById('preview').src = defaultimageURL;
+    }
 }
 
 function validateFields() {
@@ -18,7 +24,6 @@ function validateFields() {
             return false;
         }
     }
-    form.submit();
 }
 
 function reset() {
@@ -27,16 +32,20 @@ function reset() {
 
 function addCourses() {
     var li = document.createElement('li');
-    var inputCourseID = document.createElement('input');
-    var inputCourseReason = document.createElement('input');
-    inputCourseID.setAttribute("type", "text");
-    inputCourseID.setAttribute("value", "ITSC2181 - Intro to Computer Systems: ");
-    inputCourseReason.setAttribute("type", "text");
-    inputCourseReason.setAttribute("value", "It is required for my degree.");
+    var textareaCourseID = document.createElement('textarea');
+    var textareaCourseReason = document.createElement('textarea');
+    textareaCourseID.setAttribute("type", "textarea");
+    textareaCourseID.setAttribute("rows", "2");
+    textareaCourseID.setAttribute("cols", "20");
+    textareaCourseID.setAttribute("value", "ITSC2181 - Intro to Computer Systems: ");
+    textareaCourseReason.setAttribute("type", "textarea");
+    textareaCourseReason.setAttribute("rows", "2");
+    textareaCourseReason.setAttribute("cols", "20");
+    textareaCourseReason.setAttribute("value", "It is required for my degree.");
     var form = document.getElementById('courses');
-    li.appendChild(inputCourseID)
+    li.appendChild(textareaCourseID)
     li.append(" : ");
-    li.appendChild(inputCourseReason);
+    li.appendChild(textareaCourseReason);
     form.appendChild(li);
 }
 
@@ -48,10 +57,15 @@ function deleteCourse() {
 function submit() {
     if (!validateFields()) { return; }
 
+    var ul = document.createElement('ul');
     var username = document.getElementById('username').value;
     var mascot = document.getElementById('mascot').value;
     
     var image = document.getElementById('image').files[0];
+    if (image) {
+        var imageURL = URL.createObjectURL(image);
+        document.getElementById('intro-image').src = imageURL;
+    }
     var image_caption = document.getElementById('image-caption').value;
     var personal_background = document.getElementById('personal-background').value;
     var professional_background = document.getElementById('professional-background').value;
@@ -75,10 +89,11 @@ function submit() {
     document.getElementById('intro-background-in-web-development').textContent = background_in_web_development;
     document.getElementById('intro-platform').textContent = platform;
     document.getElementById('intro-courses').textContent = course;
+    var ul2 = document.createElement('ul2');
     for (var i = 0; i < courses.length; i++) {
         var li = document.createElement('li');
         li.textContent = courses[i].id + " : " + courses[i].description;
-        ul.appendChild(li);
+        ul2.appendChild(li);
     }
 
     document.getElementById('intro-funny-thing').textContent = funny_thing;
@@ -86,4 +101,20 @@ function submit() {
 
     document.getElementById('byo-introduction').style.display = 'none';
     document.getElementById('byo-intro').style.display = 'block';    
+
+
+    document.body.appendChild(ul);
+    ul.appendChild(username);
+    ul.appendChild(mascot);
+    ul.appendChild(image);
+    ul.appendChild(image_caption);
+    ul.appendChild(personal_background);
+    ul.appendChild(professional_background);
+    ul.appendChild(academic_background);
+    ul.appendChild(background_in_web_development);
+    ul.appendChild(platform);
+    ul.appendChild(course);
+    document.body.appendChild(ul2);
+    ul.appendChild(funny_thing);
+    ul.appendChild(anything_else);
 }
