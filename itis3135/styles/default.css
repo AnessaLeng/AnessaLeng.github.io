@@ -148,9 +148,10 @@ fieldset {
     border-bottom: 3px solid #e2cce0;
 }
 
-textarea {
-    margin-left: 0;  
+textarea:not(#course-id):not(#course-reason){
     font-family: 'Tahoma', 'sans-serif';  
+    width: 55%;
+    display: block;
 }
 
 input[type="submit"], input[type="reset"]{
@@ -233,5 +234,11 @@ input[type="submit"], input[type="reset"]{
         padding: 1em 0;
         font-size: 20px;
         border-bottom: 3px solid #e2cce0;
+    }
+
+    textarea:not(#course-id):not(#course-reason){
+        font-family: 'Tahoma', 'sans-serif';  
+        width: 55%;
+        display: block;
     }
 }

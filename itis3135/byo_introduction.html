@@ -10,29 +10,21 @@
 <body>
     <div data-include="components/header.html"></div>
     <main>
+        <div id="byo-introduction" style="display: block;">
         <h2>BYO Introduction</h2>
         <h3>Time to BYO Introduction page, please fill out the form below so we can create your own page.</h3>
-        <form id="byo-introduction" onsubmit="event.preventDefault(); submit();" style="display: block;">
+        <form action="#" method="post" onsubmit="return validateFields()">
             <p>* indicates the required fields</p>
             <fieldset>
-                <label for="username">*Name:
-                    <input id="username" type="text" value="Anessa Leng" required>
-                </label>
-                <label for="mascot">*Mascot:
-                    <input id="mascot" type="text" value="Amber Lion" required>
-                </label>
+                <label for="username">*Name: <input id="username" type="text" value="Anessa Leng" required></label>
+                <label for="mascot">*Mascot: <input id="mascot" type="text" value="Amber Lion" required></label>
             </fieldset>
             <fieldset>
-                <label for="image">*Upload your image:
-                    <input id="image" type="file" accept=".png, .jpg">
-                </label>    
+                <label for="image">*Upload your image: <input id="image" type="file" accept=".png, .jpg"></label> 
                 <div id="loadImage">
                     <button type="button" onclick="loadImage()">Click here to load</button>
-                </div>
-                <img id="preview" src="" alt="Image Preview">
-                <label for="image-caption">*Caption:
-                    <input id="image-caption" type="text" value="Chinatown, NY" required>
-                </label>
+                </div><img id="preview" src="" alt="Image Preview">
+                <label for="image-caption">*Caption: <input id="image-caption" type="text" value="Chinatown, NY" required></label>
             </fieldset>
             <fieldset>
                 <label for="personal-background">*Personal Background:</label>
@@ -51,7 +43,7 @@
                     <p>Course ID : Reason for taking</p>
                 <ul id="courses">
                     <li><textarea id="course-id" type="textarea" rows="2" cols="20" required>ITIS3200 - Intro to Security and Privacy</textarea>
-                        : <textarea id="course-reason" type="textarea" rows="2" cols="20" required>It is required for my degree and concentration.</textarea>
+                       : <textarea id="course-reason" type="textarea" rows="2" cols="20" required>It is required for my degree and concentration.</textarea>
                     <input type="button" value="Add Course" onclick="addCourses()">
                     <input type="button" value="Delete Course" onclick="deleteCourse()">
                 </ul>
@@ -75,23 +67,24 @@
                 <input type="submit" value="Submit" onclick="submit()">
             </fieldset>
         </form>
-        <div id="byo-intro" style="display: none;">
+        </div>
+        <div id="byo-intro" style="display: block;">
             <h2>BYO Introduction</h2>
             <h2 id="intro-username"></h2><h2 id="intro-mascot"></h2>
             <figure id="intro-image"><img src=""></figure>
             <figcaption id="intro-image-caption"><p></p></figcaption>
             <ul>
-                <li><span class="topic">Personal Background: <p id="intro-personal-background"></p></span>
-                <li><span class="topic">Professional Background: <p id="intro-professional-background"></p></span> 
-                <li><span class="topic">Academic Background: <p id="intro-academic-background"></p></span> 
-                <li><span class="topic">Background in this Subject: <p id="intro-background-in-web-development"></p></span>
-                <li><span class="topic">Primary Computer Platform: <p id="intro-platform"></p></span>
+                <li><span class="topic">Personal Background: <p id="intro-personal-background" value=""></p></span>
+                <li><span class="topic">Professional Background: <p id="intro-professional-background" value=""></p></span> 
+                <li><span class="topic">Academic Background: <p id="intro-academic-background" value=""></p></span> 
+                <li><span class="topic">Background in this Subject: <p id="intro-background-in-web-development" value=""></p></span>
+                <li><span class="topic">Primary Computer Platform: <p id="intro-platform" value=""></p></span>
                 <li><span class="topic">Courses I am Taking and Why: </span>
                     <ul id="intro-courses">
                        
                     </ul>
-                <li><span class="topic">Funny thing: <p id="intro-funny-thing"></p></span>
-                <li><span class="topic">Anything else: <p id="intro-anything-else"></p></span>
+                <li><span class="topic">Funny thing: <p id="intro-funny-thing" value=""></p></span>
+                <li><span class="topic">Anything else: <p id="intro-anything-else" value=""></p></span>
             </ul>
         </div>
     </main>
