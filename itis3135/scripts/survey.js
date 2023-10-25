@@ -75,7 +75,7 @@ function submit() {
     
     document.getElementById('intro-username').textContent = username;
     document.getElementById('intro-mascot').textContent = mascot;
-    document.getElementById('intro-image').textContent = image;
+    document.getElementById('intro-image').src = image;
     document.getElementById('intro-image-caption').textContent = image_caption;
     document.getElementById('intro-personal-background').textContent = personal_background;
     document.getElementById('intro-professional-background').textContent = professional_background;
