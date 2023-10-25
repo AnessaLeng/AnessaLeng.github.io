@@ -10,17 +10,17 @@
 <body>
     <div data-include="components/header.html"></div>
     <main>
-        <div id="byo-introduction" style="display: block;">
+        <div id="form" style="display: block;">
         <h2>BYO Introduction</h2>
         <h3>Time to BYO Introduction page, please fill out the form below so we can create your own page.</h3>
-        <form action="#" method="post" onsubmit="return validateFields()">
+        <form id="byo-introduction" onsubmit="return submit();">
             <p>* indicates the required fields</p>
             <fieldset>
                 <label for="username">*Name: <input id="username" type="text" value="Anessa Leng" required></label>
                 <label for="mascot">*Mascot: <input id="mascot" type="text" value="Amber Lion" required></label>
             </fieldset>
             <fieldset>
-                <label for="image">*Upload your image: <input id="image" type="file" accept=".png, .jpg"></label> 
+                <label for="image">*Upload your image: <input id="image" type="file" accept=".png, .jpg" required></label> 
                 <div id="loadImage">
                     <button type="button" onclick="loadImage()">Click here to load</button>
                 </div><img id="preview" src="" alt="Image Preview">
@@ -64,27 +64,27 @@
             </fieldset>
             <fieldset>
                 <input type="reset" value="Reset" onclick="reset()">
-                <input type="submit" value="Submit" onclick="submit()">
+                <input type="submit" value="Submit" onclick="event.preventDefault(); submit();">
             </fieldset>
         </form>
         </div>
         <div id="byo-intro" style="display: block;">
             <h2>BYO Introduction</h2>
-            <h2 id="intro-username"></h2><h2 id="intro-mascot"></h2>
-            <figure id="intro-image"><img src=""></figure>
-            <figcaption id="intro-image-caption"><p></p></figcaption>
+            <h3 id="intro-username"></h3><h3 id="intro-mascot"></h3>   
+            <div id="intro-image"><img id="subpreview" src="" alt="Image"></div> 
+            <p id="intro-image-caption"></p> 
             <ul>
-                <li><span class="topic">Personal Background: <p id="intro-personal-background" value=""></p></span>
-                <li><span class="topic">Professional Background: <p id="intro-professional-background" value=""></p></span> 
-                <li><span class="topic">Academic Background: <p id="intro-academic-background" value=""></p></span> 
-                <li><span class="topic">Background in this Subject: <p id="intro-background-in-web-development" value=""></p></span>
-                <li><span class="topic">Primary Computer Platform: <p id="intro-platform" value=""></p></span>
-                <li><span class="topic">Courses I am Taking and Why: </span>
-                    <ul id="intro-courses">
-                       
-                    </ul>
-                <li><span class="topic">Funny thing: <p id="intro-funny-thing" value=""></p></span>
-                <li><span class="topic">Anything else: <p id="intro-anything-else" value=""></p></span>
+                <li id="intro-personal-background"><span class="topic">Personal Background: </span>
+                <li id="intro-professional-background"><span class="topic">Professional Background: </span>
+                <li id="intro-academic-background"><span class="topic">Academic Background: </span>
+                <li id="intro-background-in-web-development"><span class="topic">Background in this Subject: </span>
+                <li id="intro-platform"><span class="topic">Primary Computer Platform: </span>
+                <li id="intro-courses"><span class="topic">Courses I am Taking and Why: </span>
+                <ul>
+
+                </ul>
+                <li id="intro-funny-thing"><span class="topic">Something Funny: </span>
+                <li id="intro-anything-else"><span class="topic">Anything Else: </span>
             </ul>
         </div>
     </main>

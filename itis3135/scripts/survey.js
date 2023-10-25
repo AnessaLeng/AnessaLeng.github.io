@@ -58,71 +58,40 @@ function deleteCourse() {
 }
 
 function submit() {
-    if (!validateFields) { return; }
-
-    var ul = document.createElement('ul');
+    if (!validateFields()) { return false; }
     var username = document.getElementById('username').value;
     var mascot = document.getElementById('mascot').value;
-    var image = loadImage();
+    var image = document.getElementById('preview').src;
     var image_caption = document.getElementById('image-caption').value;
     var personal_background = document.getElementById('personal-background').value;
     var professional_background = document.getElementById('professional-background').value;
     var academic_background = document.getElementById('academic-background').value;
     var background_in_web_development = document.getElementById('background-in-web-development').value;
     var platform = document.getElementById('platform').value;
-        
     var course = {id: document.getElementById('course-id').value, description: document.getElementById('course-reason').value};
     courses.push(course);
-
     var funny_thing = document.getElementById('funny-thing').value;
     var anything_else = document.getElementById('anything-else').value;
+    
+    document.getElementById('intro-username').textContent = username;
+    document.getElementById('intro-mascot').textContent = mascot;
+    document.getElementById('intro-image').textContent = image;
+    document.getElementById('intro-image-caption').textContent = image_caption;
+    document.getElementById('intro-personal-background').textContent = personal_background;
+    document.getElementById('intro-professional-background').textContent = professional_background;
+    document.getElementById('intro-academic-background').textContent = academic_background;
+    document.getElementById('intro-background-in-web-development').textContent = background_in_web_development;
+    document.getElementById('intro-platform').textContent = platform;
+    document.getElementById('intro-courses').textContent = course;
+    document.getElementById('intro-funny-thing').textContent = funny_thing;
+    document.getElementById('intro-anything-else').textContent = anything_else;
 
-    document.getElementById('intro-username').value = username;
-    document.getElementById('intro-mascot').value = mascot;
-    document.getElementById('intro-image').value = image;
-    document.getElementById('intro-image-caption').value = image_caption;
-    document.getElementById('intro-personal-background').value = personal_background;
-    document.getElementById('intro-professional-background').value = professional_background;
-    document.getElementById('intro-academic-background').value = academic_background;
-    document.getElementById('intro-background-in-web-development').value = background_in_web_development;
-    document.getElementById('intro-platform').value = platform;
-    document.getElementById('intro-courses').value = course;
-    var ul2 = document.createElement('ul2');
-    for (var i = 0; i < courses.length; i++) {
-        var li = document.createElement('li');
-        li.value = courses[i].id + " : " + courses[i].description;
-        ul2.appendChild(li);
-    }
-    document.getElementById('intro-funny-thing').value = funny_thing;
-    document.getElementById('intro-anything-else').value = anything_else;    
+    document.getElementById('form').style.display = 'none';
+    document.getElementById('byo-intro').style.display = 'block'; 
+
+    return false;
 }
 
-button.addEventListener('click', function() {
-    document.getElementById('byo-introduction').style.display = 'none';
-    document.getElementById('byo-intro').style.display = 'block';  
+document.getElementById('byo-intro').addEventListener('submit', function(event) {
+    event.preventDefault();
 });
-
-document.addEventListener('DOMContentLoaded', submit);
-
-var h2 = document.createElement('h2');
-h2.innerHTML = '<h2>BYO Introduction</h2>';
-document.body.appendChild(h2);
-var ul = document.createElement('ul');
-document.body.appendChild(ul);
-
-    /*
-    document.body.appendChild(ul);
-    ul.appendChild(username);
-    ul.appendChild(mascot);
-    ul.appendChild(image);
-    ul.appendChild(image_caption);
-    ul.appendChild(personal_background);
-    ul.appendChild(professional_background);
-    ul.appendChild(academic_background);
-    ul.appendChild(background_in_web_development);
-    ul.appendChild(platform);
-    ul.appendChild(course);
-    document.body.appendChild(ul2);
-    ul.appendChild(funny_thing);
-    ul.appendChild(anything_else);
-    */
