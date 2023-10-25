@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/itis3135/styles/default.css">
     <script>
-        $('a').click(function() {
-            var style = document.createAttribute('style');
+        $('a').click(function display() {
             if ($(this) == document.getElementById('home')) { $(this).style.display = 'block'; }
             else {
                 document.getElementById('home').style.display = 'none';
@@ -14,70 +13,129 @@
             }
         })
     </script>
-    <title>Anessa Leng's Amber Lion || ITIS 3135 || Home</title>
+    <title>Anessa Leng's Amber Lion || ITIS 3135 || Hobby</title>
 </head>
 <body>
     <header>
     <h1 class="title">Anessa Leng's Amber Lion || ITIS 3135</h1>
     <nav>
-        <a href=".home">Home</a> 
+        <a href="../index.html">Home</a> 
         || 
-        <a href=".who">Who</a> 
+        <a href="../introduction.html">Introduction</a> 
         || 
-        <a href=".what">What</a> 
+        <a href="../contract.html">Contract</a> 
+    </nav>
+    <nav>
+        <a href="#who" onclick="display()">Who</a> 
         || 
-        <a href=".when">When</a> 
+        <a href="#what" onclick="display()">What</a> 
         || 
-        <a href=".where">Where</a> 
+        <a href="#when" onclick="display()">When</a> 
         || 
-        <a href=".how">How</a> 
+        <a href="#where" onclick="display()">Where</a> 
         || 
-        <a href=".why">Why</a> 
+        <a href="#how" onclick="display()">How</a> 
+        || 
+        <a href="#why" onclick="display()">Why</a> 
     </nav>
     </header>
     <main>
-        <h1 id="home" style="display: block;">Hobby</h1>
+        <h1>Matcha</h1>
         <section id="who" style="display: none;">
-            <h2>Who</h2>
+            <h2>Who makes Matcha?</h2>
             <figure><img src="" alt=""></figure>
             <figcaption></figcaption>
             <p></p>
             <p></p>
         </section>
         <section id="what" style="display: none;">
-            <h2>What</h2>
-            <figure><img src="" alt=""></figure>
-            <figcaption></figcaption>
-            <p></p>
-            <p></p>
+            <h2>What is Matcha?</h2>
+            <p>Matcha is green tea leaves finely-grounded into powder.</p>
+            <div id="image">
+                <figure><img src="" alt=""></figure>
+                <figcaption></figcaption>
+            </div>
+            <div id="table">
+                <h4>Types of Matcha</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Taste</th>
+                        </tr>
+                        <tr>
+                            <td>Ceremonial</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Culinary</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Cafe</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
         <section id="when" style="display: none;">
-            <h2>When</h2>
+            <h2>When is a good time to buy matcha?</h2>
             <figure><img src="" alt=""></figure>
             <figcaption></figcaption>
-            <p></p>
-            <p></p>
+            <p>Honestly, matcha can get pretty expensive. Typically a 1oz matcha is sold for $22+ depending on where you buy from.</p>
+            <p>Based on my experience, a good time to stock up on matcha is around Black Friday/Cyber Monday and Christmas.</p>
         </section>
         <section id="where" style="display: none;">
-            <h2>Where</h2>
+            <h2>Where to buy Matcha?</h2>
             <figure><img src="" alt=""></figure>
             <figcaption></figcaption>
-            <p></p>
-            <p></p>
+            <ul>
+                <li>Amazon - many brands to choose from
+                <li>Chamberlain Coffee - they have different flavors  
+                <li>Starbucks - if you prefer not to make it yourself
+            </ul>
+            <p>There are others, but this is where I usually purchase from.</p>
+            <form>
+                Where do you buy matcha? <input id="where-to-buy" type="text">
+                <input id="submit" type="submit" value="Submit">
+            </form>
         </section>
         <section id="how" style="display: none;">
-            <h2>How</h2>
+            <h2>How to make a Matcha latte</h2>
             <figure><img src="" alt=""></figure>
             <figcaption></figcaption>
-            <p></p>
-            <p></p>
+            <p>Preparing a matcha latte the traditional way:</p>
+            <ol>
+                <li>Heat up water (we only need a small amount)
+                <li>Put about 1 teaspoon of matcha in the bowl
+                <li>Soak the wooden whisk in the water to soften the bristles
+                <li>Then pour the water in the bowl containing the matcha
+                <li>Using the whisk, mix the matcha and water in an "M" motion until the powder is dissolved, and set aside
+                <li>Get a pretty glass and fill it with ice along with your choice of milk (my favorite is almondmilk or oatmilk)
+                <li>Pour the matcha on top, and enjoy!
+            </ol>
+            <p>An alternative is using an electric handheld whisk instead of the wooden whisk - it works the same.</p>
         </section>
         <section id="why" style="display: none;">
-            <h2>Why</h2>
+            <h2>Why should I drink Matcha?</h2>
             <figure><img src="" alt=""></figure>
             <figcaption></figcaption>
-            <p></p>
-            <p></p>
+            <p>Benefits of drinking matcha:</p>
+            <ul>
+                <li>
+                <li>
+                <li>
+                <li>
+                <li>
+                <li>
+                <li>
+                <li>
+            </ul>
         </section>
     </main>
     <footer>
