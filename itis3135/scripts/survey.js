@@ -1,6 +1,10 @@
 var original = document.body.innerHTML;
 var courses = [];
 
+document.getElementById('byo-introduction').addEventListener('submit', function(event) {
+    event.preventDefault();
+});
+
 function loadImage() {
     var input = document.getElementById('image');
     var file = input.files[0];
@@ -73,25 +77,22 @@ function submit() {
     var funny_thing = document.getElementById('funny-thing').value;
     var anything_else = document.getElementById('anything-else').value;
     
-    document.getElementById('intro-username').textContent = username;
-    document.getElementById('intro-mascot').textContent = mascot;
-    document.getElementById('intro-image').src = image;
-    document.getElementById('intro-image-caption').textContent = image_caption;
-    document.getElementById('intro-personal-background').textContent = personal_background;
-    document.getElementById('intro-professional-background').textContent = professional_background;
-    document.getElementById('intro-academic-background').textContent = academic_background;
-    document.getElementById('intro-background-in-web-development').textContent = background_in_web_development;
-    document.getElementById('intro-platform').textContent = platform;
-    document.getElementById('intro-courses').textContent = course;
-    document.getElementById('intro-funny-thing').textContent = funny_thing;
-    document.getElementById('intro-anything-else').textContent = anything_else;
+    var form = document.getElementById('byo-intro');
+    form.getElementById('intro-username').textContent = username;
+    form.getElementById('intro-mascot').textContent = mascot;
+    form.getElementById('intro-image').src = image;
+    form.getElementById('intro-image-caption').textContent = image_caption;
+    form.getElementById('intro-personal-background').textContent = personal_background;
+    form.getElementById('intro-professional-background').textContent = professional_background;
+    form.getElementById('intro-academic-background').textContent = academic_background;
+    form.getElementById('intro-background-in-web-development').textContent = background_in_web_development;
+    form.getElementById('intro-platform').textContent = platform;
+    form.getElementById('intro-courses').textContent = course;
+    form.getElementById('intro-funny-thing').textContent = funny_thing;
+    form.getElementById('intro-anything-else').textContent = anything_else;
 
     document.getElementById('form').style.display = 'none';
     document.getElementById('byo-intro').style.display = 'block'; 
 
     return false;
 }
-
-document.getElementById('byo-intro').addEventListener('submit', function(event) {
-    event.preventDefault();
-});
