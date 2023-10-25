@@ -165,6 +165,10 @@ input[type="submit"], input[type="reset"]{
     margin-bottom: 1em;
 }
 
+.calculator-keys {
+    display: grid;
+}
+
 @media (min-width: 320px), (max-width: 576px){
     body {
         font-family: 'Tahoma', sans-serif;
