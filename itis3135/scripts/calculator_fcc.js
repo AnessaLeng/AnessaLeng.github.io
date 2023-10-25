@@ -16,10 +16,11 @@ keys.addEventListener('click', e => {
             }
             calculator.dataset.previousKeyType = 'number';
         }
-        else if (action == 'add' ||
-                 action == 'subtract' ||
-                 action == 'multiply' ||
-                 action == 'divide') {
+
+        if (action == 'add' ||
+            action == 'subtract' ||
+            action == 'multiply' ||
+            action == 'divide') {
 
             const firstValue = calculator.dataset.firstValue;
             const operator = calculator.dataset.operator;
@@ -39,7 +40,8 @@ keys.addEventListener('click', e => {
             calculator.dataset.firstValue = displayedNumber;
             calculator.dataset.operator = action;
         }
-        else if (action == 'decimal') {
+        
+        if (action == 'decimal') {
             if (!displayedNumber.includes('.')) {
                 display.textContent = displayedNumber + ".";
             }
@@ -48,12 +50,13 @@ keys.addEventListener('click', e => {
             }
             calculator.dataset.previousKeyType = 'decimal';
         }
-        else if (action == 'clear') {
+        
+        if (action == 'clear') {
             if (action != 'clear') {
                 const clearButton = calculator.querySelector('[data-action=clear]');
                 clearButton.textContent = 'CE';
             }
-            
+
             if (key.textContent == 'AC') {
                 calculator.dataset.firstValue = '';
                 calculator.dataset.modValue = '';
@@ -66,7 +69,8 @@ keys.addEventListener('click', e => {
             display.textContent = 0;
             calculator.dataset.previousKeyType = 'clear';
         }
-        else {
+        
+        if (action == 'calculate') {
             const firstValue = calculator.dataset.firstValue;
             const operator = calculator.dataset.operator;
             const secondValue = displayedNumber;
@@ -87,21 +91,56 @@ keys.addEventListener('click', e => {
 })
 
 const calculate = (number1, operator, number2) => {
-    let result = '';
-
-    if (operator == 'add') {
-        result = parseFloat(number1) + parseFloat(number2);
-    }
-    else if (operator = 'subtract') {
-        result = parseFloat(number1) - parseFloat(number2);
-    }
-    else if (operator == 'multiply') {
-        result = parseFloat(number1) * parseFloat(number2);
-    }
-    else {
-        result = parseFloat(number1) / parseFloat(number2);
-    }
-
-    return result;
+    const firstNumber = parseFloat(number1);
+    const secondNumber = parseFloat(number2);
+    if (operator == 'add') return firstNumber + secondNumber;
+    if (operator = 'subtract') return firstNumber - secondNumber;
+    if (operator == 'multiply') return firstNumber * secondNumber;
+    if (operator == 'divide') return firstNumber / secondNumber;
 }
 
+const createResultString = () => {
+    if (!action) {
+        return displayedNumber == '0' || previousKeyType == 'operator' || previousKeyType == 'calculate'
+        ? keyContent : displayedNumber + keyContent;
+    }
+
+    if (action == 'decimal') {
+        if (!displayedNumber.includes('.')) return displayedNumber + ".";
+        if (previousKeyType == 'operator' || previousKeyType == 'calculate') return '0.';
+        return displayedNumber;
+    }
+
+    if (action == 'add' || action == 'subtract' || action == 'multiply' || action == 'divide') {
+        const firstValue = calculator.dataset.firstValue;
+        const operator = calculator.dataset.operator;
+
+        return firstValue && operator && previousKeyType != 'operator' && previousKeyType != 'calculate'
+        ? calculate(firstValue, operator, displayedNumber) : displayedNumber;
+    }
+
+    if (action == 'clear') {
+        return 0;
+    }
+
+    if (action == 'calculate') {
+        const firstValue = calculator.dataset.firstValue;
+        const operator = calculator.dataset.operator;
+        const modValue = calculator.dataset.modValue;
+
+        return firstValue
+            ? previousKeyType == 'calculate'
+            ? calculate(displayedNumber, operator, modValue)
+            : calculate(firstValue, operator, displayedNumber)
+            : displayedNumber;
+    }
+}
+
+const createResultString = (key, displayedNumber, state) => {
+    const keyContent = key.textContent;
+    const action = key.dataset.action;
+    const firstValue = state.firstValue;
+    const modValue = state.modValue;
+    const operator = state.operator;
+    const previousKeyType = state.previousKeyType;
+}
