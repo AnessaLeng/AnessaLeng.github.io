@@ -35,6 +35,19 @@ function reset() {
     document.body.innerHTML = original;
 }
 
+var defaultCoursesid = [];
+    defaultCoursesid.push("ITIS3200 - Intro to Security and Privacy");
+    defaultCoursesid.push("ITSC2181 - Intro to Computer Systems");
+    defaultCoursesid.push("STAT2122 - Intro to Probability and Statistics");
+    defaultCoursesid.push("ITSC3146 - Intro to Operating Systems and Networking");
+    defaultCoursesid.push("ITIS3135 - Web App Design and Development");
+var defaultCoursesreason = [];
+    defaultCoursesreason.push("It is required for my degree and concentration.");
+    defaultCoursesreason.push("It is required for my degree.");
+    defaultCoursesreason.push("Unfortunately, I need this for my degree.");
+    defaultCoursesreason.push("It is required for my degree.");
+    defaultCoursesreason.push("It is required for my degree, but I am also thrilled to learn more about this subject.");
+
 function addCourses() {
     var li = document.createElement('li');
     var textareaCourseID = document.createElement('textarea');
