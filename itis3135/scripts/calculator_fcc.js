@@ -98,7 +98,7 @@ const calculate = (number1, operator, number2) => {
     if (operator == 'multiply') return firstNumber * secondNumber;
     if (operator == 'divide') return firstNumber / secondNumber;
 }
-
+/*
 const createResultString = () => {
     if (!action) {
         return displayedNumber == '0' || previousKeyType == 'operator' || previousKeyType == 'calculate'
@@ -144,3 +144,4 @@ const createResultString = (key, displayedNumber, state) => {
     const operator = state.operator;
     const previousKeyType = state.previousKeyType;
 }
+*/
