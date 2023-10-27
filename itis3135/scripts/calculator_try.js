@@ -1,82 +1,91 @@
-var number1 = [];
-var number2 = [];
-var operation;
+var number1 = '';
+var number2 = '';
+var operator = null;
 var answer;
-
-window.onload = function() {
-    document.getElementById('zero').onclick = showNum;
-    document.getElementById('one').onclick = showNum;
-    document.getElementById('two').onclick = showNum;
-    document.getElementById('three').onclick = showNum;
-    document.getElementById('four').onclick = showNum;
-    document.getElementById('five').onclick = showNum;
-    document.getElementById('six').onclick = showNum;
-    document.getElementById('seven').onclick = showNum;
-    document.getElementById('eight').onclick = showNum;
-    document.getElementById('nine').onclick = showNum;
-}
 
 function showNum() {
-    document.getElementById('display-numbers').textContent = document.formCalculator.textNumber.value += this.value;
+    if (operator == null) {
+        number1 = document.getElementById('calculator-display').textContent;
+    }
+    else {
+        number2 = document.getElementById('calculator-display').textContent;
+    }
 }
-/*
-$('button').click(function() {
-    while ($(this) != document.getElementById('row-operators')) {
-        var digit = $(this).val();
-        number1.push(digit);
-        document.getElementById('display-numbers').textContent = number1;
-    }
-    
-    while ($(this) < document.getElementById('row-operators')) {
-        operation = document.getElementById('row-operators').value;
-        var digit = $(this).val();
-        number2.push(digit);
-        document.getElementById('display-numbers').textContent = number2;
-        
-        if ($(this).val() == 'enter') {
-            if (operation == 'subtraction') {
-                answer = number1 - number2;
-            }
-            else if (operation == 'addition') {
-                answer = number1 + number2;
-            }
-            else if (operation == 'multiply') {
-                answer = number1 * number2;
-            }
-            else if (operation == 'divide') {
-                answer = number1 / number2;
-            }
+
+window.onload = function() {
+    var buttons = ['zero', 'decimal', 'clear', 'enter', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'subtraction', 'addition', 'multiply', 'divide'];
+    buttons.forEach(function(button) {
+        if (button == 'clear') {
+            document.getElementById(button).addEventListener('click', allClear);
         }
-        alert (answer);
+        else if (button == 'subtraction' || button == 'addition' || button == 'multiply' || button == 'divide') {
+            document.getElementById(button).addEventListener('click', operation);
+        }
+        else if (button == 'enter') {
+            document.getElementById(button).addEventListener('click', calculate);
+        }
+        else {
+            document.getElementById(button).addEventListener('click', appendNumber);
+        }
+    });
+}
+
+function appendNumber() {
+    var display = document.getElementById('calculator-display');
+    if(operator == null) {
+        number1 = (display.textContent += this.value);
+        showNum;
     }
-});
-*/
-var number = [];
-var number2 = [];
-var operation;
-var answer;
-var entry = $('button').click;
-while (entry.value != 'subtraction' || entry.value != 'addition' || entry.value != 'multiply' || entry.value != 'divide' || entry.value != 'enter') {
-        number.push(this.value);
-        if (entry.value == 'subtraction' || entry.value == 'addition' || entry.value == 'multiply' || entry.value == 'divide') {
-            operation = entry.value;
-            while (entry.value != 'subtraction' || entry.value != 'addition' || entry.value != 'multiply' || entry.value != 'divide' || entry.value != 'enter') {
-            number2.push(this.value);
-            if (entry.value == 'enter') {
-            if (operation == 'subtraction') {
-                 answer = number - number2;
-            }
-                                    if (operation == 'addition') {
-                                        answer = number + number2;
-                                    }
-                                    if (operation == 'multiply') {
-                                        answer = number * number2;
-                                    }
-                                    if (operation == 'divide') {
-                                        answer = number / number2;
-                                    }
-                                }
-                            }
-                }
-                alert (answer);
-            }   
+    else {
+        number2 = (display.textContent += this.value);
+        showNum;
+    }
+}
+
+function operation() {
+    if (number1 == '') {
+        alert("Oh no, was the first number entered yet?");
+        return;
+    }
+    operator = this.value;
+    document.getElementById('calculator-display').textContent = '';
+}
+
+function allClear() {
+    number1 = '';
+    number2 = '';
+    operator = null;
+    document.getElementById('calculator-display').textContent = '';
+}
+
+function calculate() {
+    if (number1 == '' || number2 == '' || operator == null) { 
+        alert("Something's missing.."); 
+        document.getElementById('calculator-display').textContent = ''; 
+        return; 
+    }
+
+    if (operator == 'subtraction') {
+        answer = parseFloat(number1) - parseFloat(number2);
+    }
+    else if (operator == 'addition') {
+        answer = parseFloat(number1) + parseFloat(number2);
+    }
+    else if (operator == 'multiply') {
+        answer = parseFloat(number1) * parseFloat(number2);
+    }
+    else if (operator == 'divide') {
+        if (number2 == '0') {
+            alert("Cannot divide by zero!");
+            return;
+        }
+        else {
+            answer = parseFloat(number1) / parseFloat(number2);
+        }
+    }
+    else {
+        alert("Cannot compute.."); 
+        return;
+    }
+    document.getElementById('calculator-display').textContent = answer;
+}
