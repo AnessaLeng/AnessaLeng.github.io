@@ -1,8 +1,12 @@
 var original = document.body.innerHTML;
 var courses = [];
 
-document.getElementById('byo-introduction').addEventListener('submit', function(event) {
+document.getElementById('form').addEventListener('submit', function(event) {
     event.preventDefault();
+    this.style.display = 'none';
+    submit;
+    document.body.appendChild(document.getElementById('byo-intro'));
+    document.getElementById('byo-intro').style.display = 'block';
 });
 
 function loadImage() {
@@ -35,20 +39,23 @@ function reset() {
     document.body.innerHTML = original;
 }
 
-var defaultCoursesid = [];
-    defaultCoursesid.push("ITIS3200 - Intro to Security and Privacy");
-    defaultCoursesid.push("ITSC2181 - Intro to Computer Systems");
-    defaultCoursesid.push("STAT2122 - Intro to Probability and Statistics");
-    defaultCoursesid.push("ITSC3146 - Intro to Operating Systems and Networking");
-    defaultCoursesid.push("ITIS3135 - Web App Design and Development");
-var defaultCoursesreason = [];
-    defaultCoursesreason.push("It is required for my degree and concentration.");
-    defaultCoursesreason.push("It is required for my degree.");
-    defaultCoursesreason.push("Unfortunately, I need this for my degree.");
-    defaultCoursesreason.push("It is required for my degree.");
-    defaultCoursesreason.push("It is required for my degree, but I am also thrilled to learn more about this subject.");
+var index = 0;
 
 function addCourses() {
+    var defaultCoursesid = [];
+    defaultCoursesid.push('ITIS3200 - Intro to Security and Privacy');
+    defaultCoursesid.push('ITSC2181 - Intro to Computer Systems');
+    defaultCoursesid.push('STAT2122 - Intro to Probability and Statistics');
+    defaultCoursesid.push('ITSC3146 - Intro to Operating Systems and Networking');
+    defaultCoursesid.push('ITIS3135 - Web App Design and Development');
+
+    var defaultCoursesreason = [];
+    defaultCoursesreason.push('It is required for my degree and concentration.');
+    defaultCoursesreason.push('It is required for my degree.');
+    defaultCoursesreason.push('Unfortunately, I need this for my degree.');
+    defaultCoursesreason.push('It is required for my degree.');
+    defaultCoursesreason.push('It is required for my degree, but I am also thrilled to learn more about this subject.');
+
     var li = document.createElement('li');
     var textareaCourseID = document.createElement('textarea');
     var textareaCourseReason = document.createElement('textarea');
@@ -56,17 +63,18 @@ function addCourses() {
     textareaCourseID.setAttribute("id", "course-id");
     textareaCourseID.setAttribute("rows", "2");
     textareaCourseID.setAttribute("cols", "20");
-    textareaCourseID.textContent = "ITSC2181 - Intro to Computer Systems";
+    textareaCourseID.textContent = defaultCoursesid[index];
     textareaCourseReason.setAttribute("type", "textarea");
     textareaCourseReason.setAttribute("id", "course-reason");
     textareaCourseReason.setAttribute("rows", "2");
     textareaCourseReason.setAttribute("cols", "20");
-    textareaCourseReason.textContent = "It is required for my degree.";
+    textareaCourseReason.textContent = defaultCoursesreason[index];
     var form = document.getElementById('courses');
     li.appendChild(textareaCourseID)
     li.append(" : ");
     li.appendChild(textareaCourseReason);
-    form.appendChild(li);
+    form.appendChild(li);    
+    index++;
 }
 
 function deleteCourse() {
@@ -75,7 +83,8 @@ function deleteCourse() {
 }
 
 function submit() {
-    if (!validateFields()) { return false; }
+    //if (!validateFields) { return false; } 
+    
     var username = document.getElementById('username').value;
     var mascot = document.getElementById('mascot').value;
     var image = document.getElementById('preview').src;
@@ -103,9 +112,6 @@ function submit() {
     form.getElementById('intro-courses').textContent = course;
     form.getElementById('intro-funny-thing').textContent = funny_thing;
     form.getElementById('intro-anything-else').textContent = anything_else;
-
-    document.getElementById('form').style.display = 'none';
-    document.getElementById('byo-intro').style.display = 'block'; 
-
+    
     return false;
 }
