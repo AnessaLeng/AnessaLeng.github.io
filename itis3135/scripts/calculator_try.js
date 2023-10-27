@@ -17,9 +17,9 @@ window.onload = function() {
 }
 
 function showNum() {
-    document.formCalculator.textNumber.value += this.value;
+    document.getElementById('display-numbers').textContent = document.formCalculator.textNumber.value += this.value;
 }
-
+/*
 $('button').click(function() {
     while ($(this) != document.getElementById('row-operators')) {
         var digit = $(this).val();
@@ -47,6 +47,36 @@ $('button').click(function() {
                 answer = number1 / number2;
             }
         }
-        alert(answer);
+        alert (answer);
     }
 });
+*/
+var number = [];
+var number2 = [];
+var operation;
+var answer;
+var entry = $('button').click;
+while (entry.value != 'subtraction' || entry.value != 'addition' || entry.value != 'multiply' || entry.value != 'divide' || entry.value != 'enter') {
+        number.push(this.value);
+        if (entry.value == 'subtraction' || entry.value == 'addition' || entry.value == 'multiply' || entry.value == 'divide') {
+            operation = entry.value;
+            while (entry.value != 'subtraction' || entry.value != 'addition' || entry.value != 'multiply' || entry.value != 'divide' || entry.value != 'enter') {
+            number2.push(this.value);
+            if (entry.value == 'enter') {
+            if (operation == 'subtraction') {
+                 answer = number - number2;
+            }
+                                    if (operation == 'addition') {
+                                        answer = number + number2;
+                                    }
+                                    if (operation == 'multiply') {
+                                        answer = number * number2;
+                                    }
+                                    if (operation == 'divide') {
+                                        answer = number / number2;
+                                    }
+                                }
+                            }
+                }
+                alert (answer);
+            }   
