@@ -1,6 +1,15 @@
 var original = document.body.innerHTML;
 var courses = [];
 
+window.onload = function() {
+    var form = document.getElementById('form');
+    form.addEventListener('submit', validateFields);
+    form.addEventListener('submit', submit);
+
+    var resetPage = document.getElementById('reset');
+    resetPage.addEventListener('click', reset);
+}
+/*
 document.getElementById('form').addEventListener('submit', function(event) {
     event.preventDefault();
     this.style.display = 'none';
@@ -8,7 +17,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
     document.body.appendChild(document.getElementById('byo-intro'));
     document.getElementById('byo-intro').style.display = 'block';
 });
-
+*/
 function loadImage() {
     var input = document.getElementById('image');
     var file = input.files[0];
@@ -83,7 +92,7 @@ function deleteCourse() {
 }
 
 function submit() {
-    //if (!validateFields) { return false; } 
+    if (!validateFields()) { return false; } 
     
     var username = document.getElementById('username').value;
     var mascot = document.getElementById('mascot').value;
@@ -100,18 +109,26 @@ function submit() {
     var anything_else = document.getElementById('anything-else').value;
     
     var form = document.getElementById('byo-intro');
-    form.getElementById('intro-username').textContent = username;
-    form.getElementById('intro-mascot').textContent = mascot;
-    form.getElementById('intro-image').src = image;
-    form.getElementById('intro-image-caption').textContent = image_caption;
-    form.getElementById('intro-personal-background').textContent = personal_background;
-    form.getElementById('intro-professional-background').textContent = professional_background;
-    form.getElementById('intro-academic-background').textContent = academic_background;
-    form.getElementById('intro-background-in-web-development').textContent = background_in_web_development;
-    form.getElementById('intro-platform').textContent = platform;
-    form.getElementById('intro-courses').textContent = course;
-    form.getElementById('intro-funny-thing').textContent = funny_thing;
-    form.getElementById('intro-anything-else').textContent = anything_else;
+    form.querySelector('#intro-username').childNodes[1].textContent = username;
+    form.querySelector('#intro-mascot').childNodes[1].textContent = mascot;
+    form.querySelector('#intro-image').src = image;
+    form.querySelector('#intro-image-caption').textContent = image_caption;
+    form.querySelector('#intro-personal-background').childNodes[1].textContent = personal_background;
+    form.querySelector('#intro-professional-background').childNodes[1].textContent = professional_background;
+    form.querySelector('#intro-academic-background').childNodes[1].textContent = academic_background;
+    form.querySelector('#intro-background-in-web-development').childNodes[1].textContent = background_in_web_development;
+    form.querySelector('#intro-platform').childNodes[1].textContent = platform;
+    
+    var courseList = form.querySelector('#intro-courses').querySelector('ul');
+    courseList.innerHTML = '';
+    for (var i=0; i < courses.length; i++) {
+        var courseItem = document.createElement('li');
+        courseItem.textContent = courses[i].id + ': ' + courses[i].description;
+        courseList.appendChild(courseItem);
+    }
+
+    form.querySelector('#intro-funny-thing').childNodes[1].textContent = funny_thing;
+    form.querySelector('#intro-anything-else').childNodes[1].textContent = anything_else;
     
     return false;
 }
