@@ -19,17 +19,9 @@ salaries.push(45000);
 salaries.push(50000);
 salaries.push(20000);
 
-//document.getElementById('add-employee').addEventListener('click', hover);
+// document.getElementById('add-employee').addEventListener('click', hover);
 // document.getElementById('display-results').addEventListener('click', hover);
-document.getElementById('display-table').addEventListener('click', hover);
-/*
-window.onload = function hover() {
-    document.getElementById(this.value).focus();
-};
-*/
-function hover() {
-    document.getElementById('results-table').scrollIntoView().focus();
-}
+// document.getElementById('display-table').addEventListener('click', hover);
 
 function addSalary() {
     var person_name = document.getElementById('add-person').value;
