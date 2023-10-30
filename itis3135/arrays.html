@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css">
+    <title>Anessa Leng's Amber Lion || ITIS 3135 || Arrays</title>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>Arrays</h2>
+        <form>
+            <fieldset id="user-add">Fill out this portion to add an Employee.
+                <div>
+                    Name: <input id="add-person" type="text">
+                </div>
+                <div>
+                    Salary: <input id="add-salary" type="number">   
+                </div>
+                <button id="add-employee" type="button" onclick="addSalary()">Add Employee</button>
+            </fieldset>
+            <fieldset>Select an Employee: 
+                <select>
+                    <option value="0">Luffy D. Monkey</option>
+                    <option value="1">Zoro Roronoa</option>
+                    <option value="2">Eren Yeager</option>
+                    <option value="3">Mikasa Ackerman</option>
+                    <option value="4">Rimuru Tempest</option>
+                    <option value="5">Rengoku Kyojuro</option>
+                    <option value="6">Nezuko Kamado</option>
+                    <option value="7">Anya Forger</option>
+                </select>
+                <button id="display-table" type="button" onclick="displaySalary()">Employee Table</button>
+                </fieldset>
+        </form>
+        <button id="display-results" type="button" onclick="displayResults()">Average and Highest Salary</button>
+        <div id="results">
+        
+        </div>
+        <table id="results-table">
+
+        </table>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.js"></script>
+    <script src="scripts/arrays.js"></script>
+</body>
+</html>
