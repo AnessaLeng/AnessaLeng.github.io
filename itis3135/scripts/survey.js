@@ -1,5 +1,5 @@
 var original = document.body.innerHTML;
-var courses = [];
+var courses = new Array();
 /*
 window.onsubmit = function addCourses() {
     courses = {id: document.getElementById('course-id').value, description: document.getElementById('course-reason').value};
@@ -52,12 +52,10 @@ function addCourses() {
     var textareaCourseID = document.createElement('textarea');
     var textareaCourseReason = document.createElement('textarea');
     var delete_button = document.createElement('input');
-    textareaCourseID.setAttribute("type", "textarea");
     textareaCourseID.setAttribute("id", "course-id");
     textareaCourseID.setAttribute("rows", "2");
     textareaCourseID.setAttribute("cols", "20");
     textareaCourseID.textContent = defaultCoursesid[index];
-    textareaCourseReason.setAttribute("type", "textarea");
     textareaCourseReason.setAttribute("id", "course-reason");
     textareaCourseReason.setAttribute("rows", "2");
     textareaCourseReason.setAttribute("cols", "20");
