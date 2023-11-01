@@ -1,15 +1,6 @@
 var original = document.body.innerHTML;
 var courses = [];
 
-/*
-document.getElementById('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    this.style.display = 'none';
-    submit;
-    document.body.appendChild(document.getElementById('byo-intro'));
-    document.getElementById('byo-intro').style.display = 'block';
-});
-*/
 function loadImage() {
     var input = document.getElementById('image');
     var file = input.files[0];
@@ -91,10 +82,15 @@ form.addEventListener('submit', (e) => {
 
     if (username =="" || mascot =="" || image=="" || image_caption =="" || personal_background =="" || professional_background =="" || academic_background =="" || background_in_web_development =="" || platform =="" || courses =="") 
     { alert('A field wasn\'\'t filled out.'); return false; } 
+
+    this.style.display = 'none';
+    document.body.appendChild(document.getElementById('byo-intro'));
+    document.getElementById('byo-intro').style.display = 'block';
     
     var second_form = document.getElementById('byo-intro');
-    second_form.querySelector('#intro-username').childNodes[1].textContent = username;
-    second_form.querySelector('#intro-mascot').childNodes[1].textContent = mascot;
+    //second_form.getElementById('intro-username').value = username;
+    //second_form.querySelector('#intro-username').childNodes[1].textContent = username;
+    //second_form.querySelector('#intro-mascot').childNodes[1].textContent = mascot;
     /*
     second_form.querySelector('#intro-image').src = image;
     second_form.querySelector('#intro-image-caption').textContent = image_caption;
@@ -112,10 +108,9 @@ form.addEventListener('submit', (e) => {
         courseItem.textContent = courses[i].id + ': ' + courses[i].description;
         courseList.appendChild(courseItem);
     }
-    */
     second_form.querySelector('#intro-funny-thing').childNodes[1].textContent = funny_thing;
     second_form.querySelector('#intro-anything-else').childNodes[1].textContent = anything_else;
-
+    */
 alert('Success!');
 });
 /*
