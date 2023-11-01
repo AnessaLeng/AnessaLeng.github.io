@@ -9,6 +9,26 @@
 <body>
     <div data-include="components/header.html"></div>
     <main>
+    </div>
+    <div id="byo-intro" style="display: none;">
+        <h2>BYO Introduction</h2>
+        <h3 id="intro-username"></h3><h3 id="intro-mascot"></h3>   
+        <figure><img id="intro-image" src="" alt="Image"></figure> 
+        <figcaption><p id="intro-image-caption"></p></figcaption>
+        <ul>
+            <li id="intro-personal-background"><span class="topic">Personal Background: </span>
+            <li id="intro-professional-background"><span class="topic">Professional Background: </span>
+            <li id="intro-academic-background"><span class="topic">Academic Background: </span>
+            <li id="intro-background-in-web-development"><span class="topic">Background in this Subject: </span>
+            <li id="intro-platform"><span class="topic">Primary Computer Platform: </span>
+            <li id="intro-courses"><span class="topic">Courses I am Taking and Why: </span>
+            <ul>
+
+            </ul>
+            <li id="intro-funny-thing"><span class="topic">Something Funny: </span>
+            <li id="intro-anything-else"><span class="topic">Anything Else: </span>
+        </ul>
+    </div>
         <div id="form" style="display: block;">
         <h2>BYO Introduction</h2>
         <h3>Time to BYO Introduction page, please fill out the form below so we can create your own page.</h3>
@@ -66,26 +86,6 @@
                 <input id="submit" type="submit" value="Submit" onclick="submit()">
             </fieldset>
         </form>
-        </div>
-        <div id="byo-intro" style="display: none;">
-            <h2>BYO Introduction</h2>
-            <h3 id="intro-username"></h3><h3 id="intro-mascot"></h3>   
-            <figure><img id="intro-image" src="" alt="Image"></figure> 
-            <figcaption><p id="intro-image-caption"></p></figcaption>
-            <ul>
-                <li id="intro-personal-background"><span class="topic">Personal Background: </span>
-                <li id="intro-professional-background"><span class="topic">Professional Background: </span>
-                <li id="intro-academic-background"><span class="topic">Academic Background: </span>
-                <li id="intro-background-in-web-development"><span class="topic">Background in this Subject: </span>
-                <li id="intro-platform"><span class="topic">Primary Computer Platform: </span>
-                <li id="intro-courses"><span class="topic">Courses I am Taking and Why: </span>
-                <ul>
-
-                </ul>
-                <li id="intro-funny-thing"><span class="topic">Something Funny: </span>
-                <li id="intro-anything-else"><span class="topic">Anything Else: </span>
-            </ul>
-        </div>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.js"></script>
