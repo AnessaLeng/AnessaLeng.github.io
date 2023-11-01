@@ -1,6 +1,12 @@
 var original = document.body.innerHTML;
 var courses = [];
 
+window.onload = function addCourses() {
+    var course = {id: document.getElementById('course-id').value, description: document.getElementById('course-reason').value};
+    course.push(course);
+    document.getElementById('intro-courses').innerHTML = courses;
+}
+
 function loadImage() {
     var input = document.getElementById('image');
     var file = input.files[0];
@@ -94,7 +100,7 @@ form.addEventListener('submit', (e) => {
     document.getElementById('intro-academic-background').innerHTML = academic_background;
     document.getElementById('intro-background-in-web-development').innerHTML = background_in_web_development;
     document.getElementById('intro-platform').innerHTML = platform;
-    
+    /*
     var courseList = [];
     var courseText = "";
     for (var i=0; i < courses.length; i++) {
@@ -104,7 +110,7 @@ form.addEventListener('submit', (e) => {
         courseList.appendChild(courseItem);
     }
     document.getElementById('intro-courses').innerHTML = courseList;
-    
+    */
     var extra;
     var child;
     if (funny_thing == "") { 
