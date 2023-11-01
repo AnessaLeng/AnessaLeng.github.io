@@ -1,5 +1,5 @@
 var original = document.body.innerHTML;
-var courses = new Array();
+var courses = [];
 /*
 window.onsubmit = function addCourses() {
     courses = {id: document.getElementById('course-id').value, description: document.getElementById('course-reason').value};
