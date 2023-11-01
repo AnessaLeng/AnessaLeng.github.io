@@ -12,7 +12,7 @@ figcaption#image-caption {
     padding-top: 0px;
 }
 
-figure img#intro-img, img#preview{
+figure img#intro-image, img#preview{
     border: 0;
     width: 300px; 
     height: auto;
