@@ -103,9 +103,24 @@ form.addEventListener('submit', (e) => {
         courseList.appendChild(courseItem);
     }
     document.getElementById('intro-courses').innerHTML = courseList;
+    
+    var extra;
+    var child;
+    if (funny_thing == "") { 
+        extra = document.getElementById('additional-info1');
+        child = document.getElementById('intro-funny-thing');
+        extra.removeChild(child); 
+    } else { 
+        document.getElementById('intro-funny-thing').innerHTML = funny_thing; 
+    }
 
-    if (funny_thing =="") { document.getElementById('additional-info1').removeChild();} else { document.getElementById('intro-funny-thing').innerHTML = funny_thing; }
-    if (anything_else =="") { document.getElementById('additional-info2').removeAttributeNode();} else { document.getElementById('intro-anything-else').innerHTML = anything_else; }
+    if (anything_else == "") { 
+        extra = document.getElementById('additional-info2');
+        child = document.getElementById('intro-anything-else');
+        extra.removeChild(child); 
+    } else { 
+        document.getElementById('intro-anything-else').innerHTML = anything_else; 
+    }
     
     alert('Successfully created your page!');
 });

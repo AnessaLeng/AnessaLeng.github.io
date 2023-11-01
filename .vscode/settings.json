@@ -1,3 +1,4 @@
 {
-    "livePreview.customExternalBrowser": "Edge"
+    "livePreview.customExternalBrowser": "Edge",
+    "livePreview.defaultPreviewPath": "/itis3135/byo_introduction.html"
 }
