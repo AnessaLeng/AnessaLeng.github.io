@@ -1,15 +1,6 @@
 var original = document.body.innerHTML;
 var courses = [];
-/*
-window.onload = function() {
-    var form = document.getElementById('form');
-    form.addEventListener('submit', validateFields);
-    form.addEventListener('submit', submit);
 
-    var resetPage = document.getElementById('reset');
-    resetPage.addEventListener('click', reset);
-}
-*/
 /*
 document.getElementById('form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -31,19 +22,6 @@ function loadImage() {
         document.getElementById('preview').src = defaultimageURL;
     }
     return imageURL;
-}
-
-function validateFields() {
-    var form = document.getElementById('byo-introduction');
-    for (var i = 0; i < form.elements.length; i++) 
-    {
-        if (form.elements[i].value == '' && form.elements[i].hasAttribute('required')) 
-        {
-            alert("Please fill out the required field(s).");
-            return false;
-        }
-    }
-    
 }
 
 function reset() {
@@ -111,9 +89,9 @@ form.addEventListener('submit', (e) => {
     var funny_thing = document.getElementById('funny-thing').value;
     var anything_else = document.getElementById('anything-else').value;
 
-    if (username =="" || mascot =="" || image_caption =="" || personal_background =="" || professional_background =="" || academic_background =="" || background_in_web_development =="" || platform =="" || courses =="") 
+    if (username =="" || mascot =="" || image=="" || image_caption =="" || personal_background =="" || professional_background =="" || academic_background =="" || background_in_web_development =="" || platform =="" || courses =="") 
     { alert('A field wasn\'\'t filled out.'); return false; } 
-    /*
+    
     var form = document.getElementById('byo-intro');
     form.querySelector('#intro-username').childNodes[1].textContent = username;
     form.querySelector('#intro-mascot').childNodes[1].textContent = mascot;
@@ -135,7 +113,7 @@ form.addEventListener('submit', (e) => {
 
     form.querySelector('#intro-funny-thing').childNodes[1].textContent = funny_thing;
     form.querySelector('#intro-anything-else').childNodes[1].textContent = anything_else;
-*/
+
 alert('Success!');
 });
 /*
