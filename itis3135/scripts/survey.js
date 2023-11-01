@@ -1,5 +1,5 @@
 var original = document.body.innerHTML;
-var courses = [];
+var courses = new Array();
 /*
 window.onsubmit = function addCourses() {
     courses = {id: document.getElementById('course-id').value, description: document.getElementById('course-reason').value};
@@ -114,8 +114,10 @@ form.addEventListener('submit', (e) => {
     document.getElementById('intro-academic-background').innerHTML = academic_background;
     document.getElementById('intro-background-in-web-development').innerHTML = background_in_web_development;
     document.getElementById('intro-platform').innerHTML = platform;
+    for (var i=0; i < courses.length; i++) {
+        document.querySelector('ul#intro-courses').innerHTML = "<li><span class=\"topic\">" + courses[i].id + "</span>: " + courses[i].description;
+    }
     /*
-
     var courseList = [];
     var courseText = "";
     for (var i=0; i < courses.length; i++) {
@@ -125,8 +127,7 @@ form.addEventListener('submit', (e) => {
         courseList.appendChild(courseItem);
     }
     document.getElementById('intro-courses').innerHTML = courseList;
-    */
-
+*/
     if (funny_thing == "") { 
         document.getElementById('additional-info1').remove(document.getElementById('intro-funny-thing'));
     } else { 
