@@ -96,6 +96,7 @@ form.addEventListener('submit', (e) => {
     document.getElementById('intro-platform').innerHTML = platform;
     
     var courseList = [];
+    var courseText = "";
     for (var i=0; i < courses.length; i++) {
         var courseItem = document.createElement('li');
         courseText = document.createTextNode(courses[i].id) + ': ' + document.createTextNode(courses[i].description);
