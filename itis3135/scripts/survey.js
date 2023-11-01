@@ -34,9 +34,6 @@ function loadImage() {
 }
 
 function validateFields() {
-    if (username == "" || mascot == "" || image == "" || image_caption == "" || personal_background == "" || professional_background == "" || academic_background == "" || background_in_web_development == "" || platform == "" || courses == "") 
-    { alert('A field was left blank.'); return false;}
-    /*
     var form = document.getElementById('byo-introduction');
     for (var i = 0; i < form.elements.length; i++) 
     {
@@ -46,7 +43,7 @@ function validateFields() {
             return false;
         }
     }
-    */
+    
 }
 
 function reset() {
@@ -114,7 +111,8 @@ form.addEventListener('submit', (e) => {
     var funny_thing = document.getElementById('funny-thing').value;
     var anything_else = document.getElementById('anything-else').value;
 
-    if (!validateFields()) { alert('A field wasn\'\'t filled out.'); return false; } 
+    if (username =="" || mascot =="" || image_caption =="" || personal_background =="" || professional_background =="" || academic_background =="" || background_in_web_development =="" || platform =="" || courses =="") 
+    { alert('A field wasn\'\'t filled out.'); return false; } 
     /*
     var form = document.getElementById('byo-intro');
     form.querySelector('#intro-username').childNodes[1].textContent = username;
