@@ -84,7 +84,7 @@ form.addEventListener('submit', (e) => {
     { alert('A field wasn\'\'t filled out.'); return false; } 
 
     document.getElementById('form').style.display = 'none';
-    document.body.appendChild(document.getElementById('byo-intro'));
+    //document.appendChild(document.getElementById('byo-intro'));
     document.getElementById('byo-intro').style.display = 'block';
     
     var second_form = document.getElementById('byo-intro');
