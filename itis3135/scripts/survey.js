@@ -61,6 +61,7 @@ function addCourses() {
     li.appendChild(textareaCourseID)
     li.append(" : ");
     li.appendChild(textareaCourseReason);
+    li.append(" ");
     li.appendChild(delete_button);
     form.appendChild(li);    
     index++;
