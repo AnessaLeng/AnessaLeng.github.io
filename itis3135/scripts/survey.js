@@ -83,9 +83,9 @@ form.addEventListener('submit', (e) => {
     if (username =="" || mascot =="" || image=="" || image_caption =="" || personal_background =="" || professional_background =="" || academic_background =="" || background_in_web_development =="" || platform =="" || courses =="") 
     { alert('A field wasn\'\'t filled out.'); return false; } 
 
-    document.getElementById('byo-introduction').style.display = 'none';
-    //document.body.appendChild(document.getElementById('byo-intro'));
-    //document.getElementById('byo-intro').style.display = 'block';
+    document.getElementById('form').style.display = 'none';
+    document.body.appendChild(document.getElementById('byo-intro'));
+    document.getElementById('byo-intro').style.display = 'block';
     
     var second_form = document.getElementById('byo-intro');
     //second_form.getElementById('intro-username').value = username;
