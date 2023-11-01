@@ -87,7 +87,7 @@ form.addEventListener('submit', (e) => {
     document.getElementById('byo-intro').style.display = 'block';
     
     var second_form = document.getElementById('byo-intro');
-    second_form.getElementById('#intro-username').value = username;
+    second_form.getElementById('intro-username').value = username;
     //second_form.querySelector('#intro-username').childNodes[1].textContent = username;
     //second_form.querySelector('#intro-mascot').childNodes[1].textContent = mascot;
     /*
