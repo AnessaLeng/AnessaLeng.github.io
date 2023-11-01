@@ -86,72 +86,25 @@ form.addEventListener('submit', (e) => {
     document.getElementById('form').style.display = 'none';
     document.getElementById('byo-intro').style.display = 'block';
     
-    var second_form = document.getElementById('byo-intro');
-    second_form.getElementById('intro-username').value = username;
-    //second_form.querySelector('#intro-username').childNodes[1].textContent = username;
-    //second_form.querySelector('#intro-mascot').childNodes[1].textContent = mascot;
-    /*
-    second_form.querySelector('#intro-image').src = image;
-    second_form.querySelector('#intro-image-caption').textContent = image_caption;
-    second_form.querySelector('#intro-personal-background').childNodes[1].textContent = personal_background;
-    second_form.querySelector('#intro-professional-background').childNodes[1].textContent = professional_background;
-    second_form.querySelector('#intro-academic-background').childNodes[1].textContent = academic_background;
-    second_form.querySelector('#intro-background-in-web-development').childNodes[1].textContent = background_in_web_development;
-    second_form.querySelector('#intro-platform').childNodes[1].textContent = platform;
-    */
-    /*
-    var courseList = second_form.querySelector('#intro-courses').querySelector('ul');
-    courseList.innerHTML = '';
+    document.getElementById('intro-username').innerHTML = username;
+    document.getElementById('intro-mascot').innerHTML = mascot;
+    document.getElementById('intro-image').src = image;
+    document.getElementById('intro-image-caption').innerHTML = image_caption;
+    document.getElementById('intro-personal-background').innerHTML = personal_background;
+    document.getElementById('intro-professional-background').innerHTML = professional_background;
+    document.getElementById('intro-academic-background').innerHTML = academic_background;
+    document.getElementById('intro-background-in-web-development').innerHTML = background_in_web_development;
+    document.getElementById('intro-platform').innerHTML = platform;
+    
+    var courseList = document.getElementById('intro-courses');
     for (var i=0; i < courses.length; i++) {
         var courseItem = document.createElement('li');
-        courseItem.textContent = courses[i].id + ': ' + courses[i].description;
+        courseItem = document.createTextNode(courses[i].id) + ': ' + document.createTextNode(courses[i].description);
         courseList.appendChild(courseItem);
     }
-    second_form.querySelector('#intro-funny-thing').childNodes[1].textContent = funny_thing;
-    second_form.querySelector('#intro-anything-else').childNodes[1].textContent = anything_else;
-    */
-alert('Success!');
+    
+    document.getElementById('intro-funny-thing').innerHTML = funny_thing;
+    document.getElementById('intro-anything-else').innerHTML = anything_else;
+    
+    alert('Successfully created your page!');
 });
-/*
-function submit() {
-    if (!validateFields()) { return false; } 
-    
-    var username = document.getElementById('username').value;
-    var mascot = document.getElementById('mascot').value;
-    var image = document.getElementById('preview').src;
-    var image_caption = document.getElementById('image-caption').value;
-    var personal_background = document.getElementById('personal-background').value;
-    var professional_background = document.getElementById('professional-background').value;
-    var academic_background = document.getElementById('academic-background').value;
-    var background_in_web_development = document.getElementById('background-in-web-development').value;
-    var platform = document.getElementById('platform').value;
-    var course = {id: document.getElementById('course-id').value, description: document.getElementById('course-reason').value};
-    courses.push(course);
-    var funny_thing = document.getElementById('funny-thing').value;
-    var anything_else = document.getElementById('anything-else').value;
-    
-    var form = document.getElementById('byo-intro');
-    form.querySelector('#intro-username').childNodes[1].textContent = username;
-    form.querySelector('#intro-mascot').childNodes[1].textContent = mascot;
-    form.querySelector('#intro-image').src = image;
-    form.querySelector('#intro-image-caption').textContent = image_caption;
-    form.querySelector('#intro-personal-background').childNodes[1].textContent = personal_background;
-    form.querySelector('#intro-professional-background').childNodes[1].textContent = professional_background;
-    form.querySelector('#intro-academic-background').childNodes[1].textContent = academic_background;
-    form.querySelector('#intro-background-in-web-development').childNodes[1].textContent = background_in_web_development;
-    form.querySelector('#intro-platform').childNodes[1].textContent = platform;
-    
-    var courseList = form.querySelector('#intro-courses').querySelector('ul');
-    courseList.innerHTML = '';
-    for (var i=0; i < courses.length; i++) {
-        var courseItem = document.createElement('li');
-        courseItem.textContent = courses[i].id + ': ' + courses[i].description;
-        courseList.appendChild(courseItem);
-    }
-
-    form.querySelector('#intro-funny-thing').childNodes[1].textContent = funny_thing;
-    form.querySelector('#intro-anything-else').childNodes[1].textContent = anything_else;
-    
-    return false;
-}
-*/
