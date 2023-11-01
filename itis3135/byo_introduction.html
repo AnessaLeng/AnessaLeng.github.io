@@ -9,7 +9,7 @@
 <body>
     <div data-include="components/header.html"></div>
     <main>
-    <div id="byo-intro" style="display: none;">
+    <fieldset id="byo-intro" style="display: none;">
         <h2>BYO Introduction</h2>
         <h2><span id="intro-username"></span> || <span id="intro-mascot"></span></h2>  
         <figure><img id="intro-image" src="/" alt="Image"></figure>
@@ -22,13 +22,13 @@
             <li><span class="topic">Primary Computer Platform: </span><span id="intro-platform"></span>
             <li><span class="topic">Courses I am Taking and Why:</span>
             <ul id="intro-courses">
-                <span class="topic" id="intro-course-id"> </span><span id="intro-course-reason"></span>
+                <li><span class="topic" id="intro-course-id"> </span><span id="intro-course-reason"></span>
             </ul>
             <li id="additional-info1"><span class="topic">Something Funny: </span><span id="intro-funny-thing"></span></li>
             <li id="additional-info2"><span class="topic">Anything Else: </span><span id="intro-anything-else"></span></li>
         </ul>
-        <input id="reset" type="reset" value="Reset" onclick="reset()">
-    </div>
+        <input id="reset2" type="reset" value="Reset" onclick="reset()">
+    </fieldset>
         <div id="form" style="display: block;">
         <h2>BYO Introduction</h2>
         <h3>Time to BYO Introduction page, please fill out the form below so we can create your own page.</h3>
@@ -61,9 +61,9 @@
                 <label for="courses">*Current Courses:
                     Course ID : Reason for taking</label>
                 <ul id="courses">
-                    <li><textarea id="courses id" rows="2" cols="20" required>ITIS3200 - Intro to Security and Privacy</textarea>
-                       : <textarea id="courses reason" rows="2" cols="20" required>It is required for my degree and concentration.</textarea>
-                    <input id="courses add-button" type="button" value="Add Course" onclick="addCourses()">
+                    <li><textarea id="courses.id" name="course-id" rows="2" cols="20" required>ITIS3200 - Intro to Security and Privacy</textarea>
+                       : <textarea id="courses.reason" name="course-reason" rows="2" cols="20" required>It is required for my degree and concentration.</textarea>
+                    <input id="courses.add" type="button" value="Add Course" onclick="addCourses()">
                 </ul>
             </fieldset>
             <fieldset>
@@ -80,7 +80,7 @@
                 </p>
             </fieldset>
             <fieldset>
-                <input id="reset" type="reset" value="Reset" onclick="reset()">
+                <input id="reset1" type="reset" value="Reset" onclick="reset()">
                 <input id="submit" type="submit" value="Submit" onclick="submit()">
             </fieldset>
         </form>

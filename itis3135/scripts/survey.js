@@ -52,11 +52,13 @@ function addCourses() {
     var textareaCourseID = document.createElement('textarea');
     var textareaCourseReason = document.createElement('textarea');
     var delete_button = document.createElement('input');
-    textareaCourseID.setAttribute("id", "course-id");
+    textareaCourseID.setAttribute("id", "courses.id");
+    textareaCourseID.setAttribute("name", "course-id");
     textareaCourseID.setAttribute("rows", "2");
     textareaCourseID.setAttribute("cols", "20");
     textareaCourseID.textContent = defaultCoursesid[index];
-    textareaCourseReason.setAttribute("id", "course-reason");
+    textareaCourseReason.setAttribute("id", "courses.reason");
+    textareaCourseReason.setAttribute("name", "course-reason");
     textareaCourseReason.setAttribute("rows", "2");
     textareaCourseReason.setAttribute("cols", "20");
     textareaCourseReason.textContent = defaultCoursesreason[index];
@@ -92,7 +94,7 @@ form.addEventListener('submit', (e) => {
     var academic_background = document.getElementById('academic-background').value;
     var background_in_web_development = document.getElementById('background-in-web-development').value;
     var platform = document.getElementById('platform').value;
-    var course = {id: document.getElementById('course-id').value, description: document.getElementById('course-reason').value};
+    var course = {id: document.getElementsByName('courses.id'), description: document.getElementsByName('courses.reason')};    
     courses.push(course);
     var funny_thing = document.getElementById('funny-thing').value;
     var anything_else = document.getElementById('anything-else').value;
