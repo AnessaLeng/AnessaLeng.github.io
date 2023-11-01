@@ -12,7 +12,7 @@ figcaption#image-caption {
     padding-top: 0px;
 }
 
-img#intro-img, img#preview{
+figure img#intro-img, img#preview{
     border: 0;
     width: 300px; 
     height: auto;
@@ -270,5 +270,19 @@ input[type="submit"], input[type="reset"]{
         text-align: left;
         padding-left: 25%;
         padding-right: 25%;
+    }
+
+    figure img#intro-img, img#preview{
+        border: 0;
+        width: 300px; 
+        height: auto;
+        position: relative;
+    }
+    
+    p#intro-image-caption {
+        font-style: italic;
+        font-family: 'serif', sans-serif !important;
+        padding-bottom: 15px;
+        padding-top: 0px;
     }
 }

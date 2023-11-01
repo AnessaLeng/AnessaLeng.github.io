@@ -19,14 +19,13 @@ function reset() {
     document.body.innerHTML = original;
 }
 
-var index = 0;
+var index = 1;
 var defaultCoursesid = [];
     defaultCoursesid.push('ITIS3200 - Intro to Security and Privacy');
     defaultCoursesid.push('ITSC2181 - Intro to Computer Systems');
     defaultCoursesid.push('STAT2122 - Intro to Probability and Statistics');
     defaultCoursesid.push('ITSC3146 - Intro to Operating Systems and Networking');
     defaultCoursesid.push('ITIS3135 - Web App Design and Development');
-
 var defaultCoursesreason = [];
     defaultCoursesreason.push('It is required for my degree and concentration.');
     defaultCoursesreason.push('It is required for my degree.');
@@ -96,15 +95,17 @@ form.addEventListener('submit', (e) => {
     document.getElementById('intro-background-in-web-development').innerHTML = background_in_web_development;
     document.getElementById('intro-platform').innerHTML = platform;
     
-    var courseList = document.getElementById('intro-courses');
+    var courseList = [];
     for (var i=0; i < courses.length; i++) {
         var courseItem = document.createElement('li');
-        courseItem = document.createTextNode(courses[i].id) + ': ' + document.createTextNode(courses[i].description);
+        courseText = document.createTextNode(courses[i].id) + ': ' + document.createTextNode(courses[i].description);
+        courseItem.appendChild(courseText);
         courseList.appendChild(courseItem);
     }
-    
-    document.getElementById('intro-funny-thing').innerHTML = funny_thing;
-    document.getElementById('intro-anything-else').innerHTML = anything_else;
+    document.getElementById('intro-courses').innerHTML = courseList;
+
+    if (funny_thing =="") { document.getElementById('additional-info1').removeChild();} else { document.getElementById('intro-funny-thing').innerHTML = funny_thing; }
+    if (anything_else =="") { document.getElementById('additional-info2').removeAttributeNode();} else { document.getElementById('intro-anything-else').innerHTML = anything_else; }
     
     alert('Successfully created your page!');
 });
