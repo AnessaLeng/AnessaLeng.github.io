@@ -1,12 +1,20 @@
 var original = document.body.innerHTML;
 var courses = [];
-
-window.onload = function addCourses() {
-    var course = {id: document.getElementById('course-id').value, description: document.getElementById('course-reason').value};
-    course.push(course);
-    document.getElementById('intro-courses').innerHTML = courses;
+/*
+window.onsubmit = function addCourses() {
+    courses = {id: document.getElementById('course-id').value, description: document.getElementById('course-reason').value};
+    courses.push(textareaCourseID.id, textareaCourseReason.description);
+    var addingToCourses = document.getElementById('intro-courses');
+    var li;
+    for (var i = 0; i < courses.length; i++) {
+        li = document.getElementById('intro-courses').createElement('li');  
+        document.getElementById('intro-course-id').innerHTML = courses[i].id;
+        li.append(": ");
+        //document.getElementById('intro-course-reason').innerHTML = courses[i].description;
+        addingToCourses.appendChild(li);
+    }
 }
-
+*/
 function loadImage() {
     var input = document.getElementById('image');
     var file = input.files[0];
@@ -107,6 +115,7 @@ form.addEventListener('submit', (e) => {
     document.getElementById('intro-background-in-web-development').innerHTML = background_in_web_development;
     document.getElementById('intro-platform').innerHTML = platform;
     /*
+
     var courseList = [];
     var courseText = "";
     for (var i=0; i < courses.length; i++) {
