@@ -104,6 +104,8 @@ form.addEventListener('submit', (e) => {
 
     document.getElementById('form').style.display = 'none';
     document.getElementById('byo-intro').style.display = 'block';
+    document.getElementById('intro-image').style.display = 'block';
+    document.getElementById('byo-intro-content').style.display = 'block';
     
     document.getElementById('intro-username').innerHTML = username;
     document.getElementById('intro-mascot').innerHTML = mascot;
