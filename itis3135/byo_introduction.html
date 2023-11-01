@@ -9,7 +9,7 @@
 <body>
     <div data-include="components/header.html"></div>
     <main>
-    <div id="byo-intro" style="display: none;">
+    <div id="byo-intro" style="display: none;" value="put">
         <h2>BYO Introduction</h2>
         <h3 id="intro-username"></h3><h3 id="intro-mascot"></h3>   
         <figure><img id="intro-image" src="" alt="Image"></figure> 
@@ -31,7 +31,7 @@
         <div id="form" style="display: block;">
         <h2>BYO Introduction</h2>
         <h3>Time to BYO Introduction page, please fill out the form below so we can create your own page.</h3>
-        <form id="byo-introduction" action="bla" onsubmit="event.preventDefault(), submit()">
+        <form id="byo-introduction" action="" method="post" onsubmit="event.preventDefault(), submit()">
             <p>* indicates the required fields</p>
             <fieldset>
                 <label for="username">*Name: <input id="username" type="text" value="Anessa Leng" required></label>
