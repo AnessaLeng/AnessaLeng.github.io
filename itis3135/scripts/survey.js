@@ -92,27 +92,29 @@ form.addEventListener('submit', (e) => {
     if (username =="" || mascot =="" || image=="" || image_caption =="" || personal_background =="" || professional_background =="" || academic_background =="" || background_in_web_development =="" || platform =="" || courses =="") 
     { alert('A field wasn\'\'t filled out.'); return false; } 
     
-    var form = document.getElementById('byo-intro');
-    form.querySelector('#intro-username').childNodes[1].textContent = username;
-    form.querySelector('#intro-mascot').childNodes[1].textContent = mascot;
-    form.querySelector('#intro-image').src = image;
-    form.querySelector('#intro-image-caption').textContent = image_caption;
-    form.querySelector('#intro-personal-background').childNodes[1].textContent = personal_background;
-    form.querySelector('#intro-professional-background').childNodes[1].textContent = professional_background;
-    form.querySelector('#intro-academic-background').childNodes[1].textContent = academic_background;
-    form.querySelector('#intro-background-in-web-development').childNodes[1].textContent = background_in_web_development;
-    form.querySelector('#intro-platform').childNodes[1].textContent = platform;
-    
-    var courseList = form.querySelector('#intro-courses').querySelector('ul');
+    var second_form = document.getElementById('byo-intro');
+    second_form.querySelector('#intro-username').childNodes[1].textContent = username;
+    second_form.querySelector('#intro-mascot').childNodes[1].textContent = mascot;
+    /*
+    second_form.querySelector('#intro-image').src = image;
+    second_form.querySelector('#intro-image-caption').textContent = image_caption;
+    second_form.querySelector('#intro-personal-background').childNodes[1].textContent = personal_background;
+    second_form.querySelector('#intro-professional-background').childNodes[1].textContent = professional_background;
+    second_form.querySelector('#intro-academic-background').childNodes[1].textContent = academic_background;
+    second_form.querySelector('#intro-background-in-web-development').childNodes[1].textContent = background_in_web_development;
+    second_form.querySelector('#intro-platform').childNodes[1].textContent = platform;
+    */
+    /*
+    var courseList = second_form.querySelector('#intro-courses').querySelector('ul');
     courseList.innerHTML = '';
     for (var i=0; i < courses.length; i++) {
         var courseItem = document.createElement('li');
         courseItem.textContent = courses[i].id + ': ' + courses[i].description;
         courseList.appendChild(courseItem);
     }
-
-    form.querySelector('#intro-funny-thing').childNodes[1].textContent = funny_thing;
-    form.querySelector('#intro-anything-else').childNodes[1].textContent = anything_else;
+    */
+    second_form.querySelector('#intro-funny-thing').childNodes[1].textContent = funny_thing;
+    second_form.querySelector('#intro-anything-else').childNodes[1].textContent = anything_else;
 
 alert('Success!');
 });
