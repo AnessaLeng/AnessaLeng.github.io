@@ -1,6 +1,6 @@
 var original = document.body.innerHTML;
 var courses = [];
-
+/*
 window.onload = function() {
     var form = document.getElementById('form');
     form.addEventListener('submit', validateFields);
@@ -9,6 +9,7 @@ window.onload = function() {
     var resetPage = document.getElementById('reset');
     resetPage.addEventListener('click', reset);
 }
+*/
 /*
 document.getElementById('form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -33,6 +34,9 @@ function loadImage() {
 }
 
 function validateFields() {
+    if (username == "" || mascot == "" || image == "" || image_caption == "" || personal_background == "" || professional_background == "" || academic_background == "" || background_in_web_development == "" || platform == "" || courses == "") 
+    { alert('A field was left blank.'); return false;}
+    /*
     var form = document.getElementById('byo-introduction');
     for (var i = 0; i < form.elements.length; i++) 
     {
@@ -42,6 +46,7 @@ function validateFields() {
             return false;
         }
     }
+    */
 }
 
 function reset() {
@@ -49,22 +54,21 @@ function reset() {
 }
 
 var index = 0;
-
-function addCourses() {
-    var defaultCoursesid = [];
+var defaultCoursesid = [];
     defaultCoursesid.push('ITIS3200 - Intro to Security and Privacy');
     defaultCoursesid.push('ITSC2181 - Intro to Computer Systems');
     defaultCoursesid.push('STAT2122 - Intro to Probability and Statistics');
     defaultCoursesid.push('ITSC3146 - Intro to Operating Systems and Networking');
     defaultCoursesid.push('ITIS3135 - Web App Design and Development');
 
-    var defaultCoursesreason = [];
+var defaultCoursesreason = [];
     defaultCoursesreason.push('It is required for my degree and concentration.');
     defaultCoursesreason.push('It is required for my degree.');
     defaultCoursesreason.push('Unfortunately, I need this for my degree.');
     defaultCoursesreason.push('It is required for my degree.');
     defaultCoursesreason.push('It is required for my degree, but I am also thrilled to learn more about this subject.');
 
+function addCourses() {
     var li = document.createElement('li');
     var textareaCourseID = document.createElement('textarea');
     var textareaCourseReason = document.createElement('textarea');
@@ -78,7 +82,7 @@ function addCourses() {
     textareaCourseReason.setAttribute("rows", "2");
     textareaCourseReason.setAttribute("cols", "20");
     textareaCourseReason.textContent = defaultCoursesreason[index];
-    var form = document.getElementById('courses');
+    let form = document.getElementById('courses');
     li.appendChild(textareaCourseID)
     li.append(" : ");
     li.appendChild(textareaCourseReason);
@@ -95,7 +99,6 @@ let form = document.getElementById('byo-introduction');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (!validateFields()) { alert('A field wasn\'\'t filled out.'); return false; } 
 
     var username = document.getElementById('username').value;
     var mascot = document.getElementById('mascot').value;
@@ -110,6 +113,8 @@ form.addEventListener('submit', (e) => {
     courses.push(course);
     var funny_thing = document.getElementById('funny-thing').value;
     var anything_else = document.getElementById('anything-else').value;
+
+    if (!validateFields()) { alert('A field wasn\'\'t filled out.'); return false; } 
     /*
     var form = document.getElementById('byo-intro');
     form.querySelector('#intro-username').childNodes[1].textContent = username;
