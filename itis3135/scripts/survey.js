@@ -95,8 +95,8 @@ let form = document.getElementById('byo-introduction');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (!validateFields()) { return false; } 
-    
+    if (!validateFields()) { alert('A field wasn\'\'t filled out.'); return false; } 
+
     var username = document.getElementById('username').value;
     var mascot = document.getElementById('mascot').value;
     var image = document.getElementById('preview').src;
@@ -110,7 +110,7 @@ form.addEventListener('submit', (e) => {
     courses.push(course);
     var funny_thing = document.getElementById('funny-thing').value;
     var anything_else = document.getElementById('anything-else').value;
-    
+    /*
     var form = document.getElementById('byo-intro');
     form.querySelector('#intro-username').childNodes[1].textContent = username;
     form.querySelector('#intro-mascot').childNodes[1].textContent = mascot;
@@ -132,6 +132,8 @@ form.addEventListener('submit', (e) => {
 
     form.querySelector('#intro-funny-thing').childNodes[1].textContent = funny_thing;
     form.querySelector('#intro-anything-else').childNodes[1].textContent = anything_else;
+*/
+alert('Success!');
 });
 /*
 function submit() {
