@@ -111,20 +111,15 @@ form.addEventListener('submit', (e) => {
     }
     document.getElementById('intro-courses').innerHTML = courseList;
     */
-    var extra;
-    var child;
+
     if (funny_thing == "") { 
-        extra = document.getElementById('additional-info1');
-        child = document.getElementById('intro-funny-thing');
-        extra.removeChild(child); 
+        document.getElementById('additional-info1').remove(document.getElementById('intro-funny-thing'));
     } else { 
         document.getElementById('intro-funny-thing').innerHTML = funny_thing; 
     }
 
     if (anything_else == "") { 
-        extra = document.getElementById('additional-info2');
-        child = document.getElementById('intro-anything-else');
-        extra.removeChild(child); 
+        document.getElementById('additional-info2').remove(document.getElementById('intro-anything-else')); 
     } else { 
         document.getElementById('intro-anything-else').innerHTML = anything_else; 
     }
