@@ -43,6 +43,7 @@ function addCourses() {
     var li = document.createElement('li');
     var textareaCourseID = document.createElement('textarea');
     var textareaCourseReason = document.createElement('textarea');
+    var delete_button = document.createElement('input');
     textareaCourseID.setAttribute("type", "textarea");
     textareaCourseID.setAttribute("id", "course-id");
     textareaCourseID.setAttribute("rows", "2");
@@ -53,10 +54,14 @@ function addCourses() {
     textareaCourseReason.setAttribute("rows", "2");
     textareaCourseReason.setAttribute("cols", "20");
     textareaCourseReason.textContent = defaultCoursesreason[index];
+    delete_button.setAttribute("type", "button");
+    delete_button.setAttribute("value", "Delete Course");
+    delete_button.setAttribute("onclick", "deleteCourse()");
     let form = document.getElementById('courses');
     li.appendChild(textareaCourseID)
     li.append(" : ");
     li.appendChild(textareaCourseReason);
+    li.appendChild(delete_button);
     form.appendChild(li);    
     index++;
 }

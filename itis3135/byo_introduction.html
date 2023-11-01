@@ -27,6 +27,7 @@
             <li id="additional-info1"><span class="topic">Something Funny: </span><span id="intro-funny-thing"></span>
             <li id="additional-info2"><span class="topic">Anything Else: </span><span id="intro-anything-else"></span>
         </ul>
+        <input id="reset" type="reset" value="Reset" onclick="reset()">
     </div>
         <div id="form" style="display: block;">
         <h2>BYO Introduction</h2>
@@ -63,7 +64,6 @@
                     <li><textarea id="course-id" type="textarea" rows="2" cols="20" required>ITIS3200 - Intro to Security and Privacy</textarea>
                        : <textarea id="course-reason" type="textarea" rows="2" cols="20" required>It is required for my degree and concentration.</textarea>
                     <input type="button" value="Add Course" onclick="addCourses()">
-                    <input type="button" value="Delete Course" onclick="deleteCourse()">
                 </ul>
                 </label>
             </fieldset>
