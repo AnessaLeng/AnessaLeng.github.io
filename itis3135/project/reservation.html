@@ -22,13 +22,28 @@
             <form>
                 <fieldset>
                     <label for="name">Name: 
-                        <input id="name" type="text"><label>
+                        <input id="name" type="text" required></label>
                     <label for="email">Email: 
-                        <input id="email" type="email"></label>
-                    <label for="textbox">
-                        <textarea id="textbox"></textarea>
+                        <input id="email" type="email" required></label>
+                    <label for="phone">Phone Number: 
+                        <input id="phone" type="number" required></label>
+                    <label for="date">Date: 
+                        <input id="date" type="date" required></label>
+                    <label for="party">Number of guests: 
+                        <input id="party" type="number" required></label>
+                    <label for="occasion">Occasion: 
+                        <select id="occasion" type="select">
+                            <option value="0">Select One</option>
+                            <option value="1">Birthday</option>
+                            <option value="2">Graduation</option>
+                            <option value="3">Business Meeting</option>
+                            <option value="4">Other</option></select>
                     </label>
+                    <label for="comments">Anything else we need to know? 
+                        <textarea id="comments" type="text"></textarea></label>
                 </fieldset>
+                <input id="reset" type="reset" value="Reset Form">
+                <input id="submit" type="submit" value="Submit">
             </form>
         </div>
         <div id="contact-details">

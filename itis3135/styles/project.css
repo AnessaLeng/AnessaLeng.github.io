@@ -78,6 +78,12 @@ fieldset {
     border: solid .5px #1D1A05;
 }
 
+#reservation-form {
+    text-align: left;
+    padding-left: 20%;
+    padding-right: 35%;
+}
+
 #contact-details {
     padding-top: 50px;
     padding-bottom: 30px;
