@@ -80,9 +80,10 @@
             });
         });
 
-        document.getElementById('submit').addEventListener('click', function(event) {
+        document.getElementsByTagName('form')[0].addEventListener('submit', function(event) {
             event.preventDefault();
-            alert("Sounds good! I'll try that sometime.");
+            var input = document.getElementById('where-to-buy').value;
+            alert(input + ' sounds good! I will try that sometime.');
         });
     </script>
     <title>Anessa Leng's Amber Lion || ITIS 3135 || Hobby</title>
