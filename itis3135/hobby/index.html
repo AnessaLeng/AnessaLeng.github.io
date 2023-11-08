@@ -61,17 +61,29 @@
         }
     </style>
     <script>
-        $('a').click(function display() {
-            if ($(this) == document.getElementById('home')) { $(this).style.display = 'block'; }
-            else {
-                document.getElementById('home').style.display = 'none';
-                $(this).style.display = 'block';
-            }
-        })
+        window.addEventListener('DOMContentLoaded', (e) => {
+            var links = document.querySelectorAll('nav a');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
 
-        $('button').click(function alert() { 
-            if ($(this) == document.getElementById('submit')) { alert("Thanks for letting me know! I'll try it out sometime."); }
-        })
+                    var sections = document.querySelectorAll('.section');
+                    sections.forEach(function(section) {
+                        section.style.display = 'none';
+                    });
+
+                    var target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+        document.getElementById('submit').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert("Sounds good! I'll try that sometime.");
+        });
     </script>
     <title>Anessa Leng's Amber Lion || ITIS 3135 || Hobby</title>
 </head>
@@ -117,7 +129,7 @@
     </header>
     <main>
         <h1>Matcha</h1>
-        <section id="who" style="display: none;">
+        <section id="who" class="section" style="display: none;">
             <h2>Who makes Matcha?</h2>
             <figure><img src="images/pexels-anna-pou-11.7.23-8329917.jpg" alt="Woman Making Matcha">
                 <figcaption>Woman preparing matcha</figcaption></figure>
@@ -132,7 +144,7 @@
                 <li>Breakaway Matcha
             </ul>
         </section>
-        <section id="what" style="display: none;">
+        <section id="what" class="section" style="display: block;">
             <h2>What is Matcha?</h2>
             <p>Matcha is green tea leaves finely-grounded into powder. Well, the process is a little more complicated than that, but just know it is a powder.</p>
             <div id="image">
@@ -165,14 +177,14 @@
                 </table>
             </div>
         </section>
-        <section id="when" style="display: none;">
+        <section id="when" class="section" style="display: none;">
             <h2>When is a good time to buy matcha?</h2>
             <figure><img src="images/pexels-eva-bronzini-11.7.23-6833864.jpg" alt="Matcha Pancakes">
                 <figcaption>Matcha Strawberry Pancakes</figcaption></figure>
             <p>Honestly, matcha can get pretty expensive. Typically a 1oz matcha is sold for $22+ depending on where you buy from.</p>
             <p>Based on my experience, a good time to stock up on matcha is around Black Friday/Cyber Monday and Christmas.</p>
         </section>
-        <section id="where" style="display: none;">
+        <section id="where" class="section" style="display: none;">
             <h2>Where to buy Matcha?</h2>
             <figure><img src="images/pexels-charlotte-may-11.7.23-5947112.jpg" alt="Matcha from a Café">
                 <figcaption>Matcha Latte from a Café</figcaption></figure>
@@ -187,7 +199,7 @@
                 <input id="submit" type="submit" value="Submit">
             </form>
         </section>
-        <section id="how" style="display: none;">
+        <section id="how"  class="section" style="display: none;">
             <h2>How to make a Matcha latte</h2>
             <video autoplay muted><source src="images/pexels-anna-pou-11.7.23-8296157 (2160p).mp4" type="video/mp4">
             Your browser does not support the video.
@@ -204,7 +216,7 @@
             </ol>
             <p>An alternative is using an electric handheld whisk instead of the wooden whisk - it works the same.</p>
         </section>
-        <section id="why" style="display: none;">
+        <section id="why" class="section" style="display: none;">
             <h2>Why should I drink Matcha?</h2>
             <figure><img src="images/pexels-charlotte-may-11.7.23-5946668.jpg" alt="Matcha in a Bowl">
                 <figcaption>Matcha in a Bowl</figcaption></figure>
