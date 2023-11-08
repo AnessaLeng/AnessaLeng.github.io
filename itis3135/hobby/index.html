@@ -60,31 +60,6 @@
             text-align: left;
         }
     </style>
-    <script>
-        window.addEventListener('DOMContentLoaded', (e) => {
-            var links = document.querySelectorAll('nav a');
-            links.forEach(function(link) {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-
-                    var sections = document.querySelectorAll('.section');
-                    sections.forEach(function(section) {
-                        section.style.display = 'none';
-                    });
-
-                    var target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.style.display = 'block';
-                    }
-                });
-            });
-        });
-
-        document.getElementById('form').addEventListener('submit', function() {
-            var input = document.getElementById('where-to-buy').value;
-            alert(input + ' sounds good! I will try that sometime.');
-        });
-    </script>
     <title>Anessa Leng's Amber Lion || ITIS 3135 || Hobby</title>
 </head>
 <body>
@@ -245,5 +220,31 @@
         </a>
     </footer>
     <script src="scripts/HTMLInclude.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (e) => {
+            var links = document.querySelectorAll('nav a');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+
+                    var sections = document.querySelectorAll('.section');
+                    sections.forEach(function(section) {
+                        section.style.display = 'none';
+                    });
+
+                    var target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var input = document.getElementById('where-to-buy').value;
+            alert(input + ' sounds good! I will try that sometime.');
+        });
+    </script>
 </body>
 </html>
