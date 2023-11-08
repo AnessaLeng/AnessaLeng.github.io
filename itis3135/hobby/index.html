@@ -80,8 +80,7 @@
             });
         });
 
-        document.getElementById('form').addEventListener('submit', function(event) {
-            event.preventDefault();
+        document.getElementById('form').addEventListener('submit', function() {
             var input = document.getElementById('where-to-buy').value;
             alert(input + ' sounds good! I will try that sometime.');
         });
