@@ -80,7 +80,7 @@
             });
         });
 
-        document.getElementsByTagName('form')[0].addEventListener('submit', function(event) {
+        document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
             var input = document.getElementById('where-to-buy').value;
             alert(input + ' sounds good! I will try that sometime.');
@@ -195,7 +195,7 @@
                 <li>Cafés - if you prefer not to make it yourself
             </ul>
             <p>There are others, but this is where I usually purchase from.</p>
-            <form>
+            <form id="form">
                 Where do you buy matcha? <input id="where-to-buy" type="text" required>
                 <input id="submit" type="submit" value="Submit">
             </form>
