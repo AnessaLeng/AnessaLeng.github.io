@@ -17,12 +17,16 @@
             background: #85BAA1;
             padding-left: 20%;
             padding-right: 20%;
-            font-family:;
+            font-family: 'sans-serif';
         }
 
-        h1, h2, h3, h4, p {
+        h1, h2, h3, h4 {
             color: #051923;
             text-align: center;
+        }
+
+        p :not(footer) {
+            text-align: left;
         }
 
         a {
@@ -30,10 +34,30 @@
             text-decoration: none;
         }
 
-        #what img {
-            width: 300px;
+        figure img {
             height: 200px;
-            border-radius: 20%;
+            width: auto;
+            border-radius: 20% 20%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        video {
+            height: 200px;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        figcaption {
+            text-align: center;
+            font-style: italic; 
+        }
+
+        form {
+            text-align: left;
         }
     </style>
     <script>
@@ -43,6 +67,10 @@
                 document.getElementById('home').style.display = 'none';
                 $(this).style.display = 'block';
             }
+        })
+
+        $('button').click(function alert() { 
+            if ($(this) == document.getElementById('submit')) { alert("Thanks for letting me know! I'll try it out sometime."); }
         })
     </script>
     <title>Anessa Leng's Amber Lion || ITIS 3135 || Hobby</title>
@@ -56,35 +84,60 @@
         <a href="../introduction.html">Introduction</a> 
         || 
         <a href="../contract.html">Contract</a> 
+        || 
+        <a href="../tables.html">Tables</a>
+        || 
+        <a href="../forms.html">Forms</a>
+        || 
+        <a href="../firstscripts.html">First Scripts</a>
+        || 
+        <a href="../byo_introduction.html">BYO Introduction</a>
+        || 
+        <a href="../project_1.html">Project 1</a>
+        || 
+        <a href="../calculator_try.html">Calculator Try</a>
+        || 
+        <a href="../calculator_fcc.html">Calculator FCC</a>
+        || 
+        <a href="../arrays.html">Arrays</a>
     </nav>
     <nav>
         <a href="#who" onclick="display()">Who makes Matcha?</a> 
-        || 
+        🍵 
         <a href="#what" onclick="display()">What is Matcha?</a> 
-        || 
+        🍵 
         <a href="#when" onclick="display()">When to buy Matcha?</a> 
-        || 
+        🍵 
         <a href="#where" onclick="display()">Where to buy Matcha?</a> 
-        || 
+        🍵 
         <a href="#how" onclick="display()">How to make a Matcha latte</a> 
-        || 
+        🍵 
         <a href="#why" onclick="display()">Why should I drink Matcha?</a> 
     </nav>
     </header>
     <main>
         <h1>Matcha</h1>
-        <section id="who" style="display: block;">
+        <section id="who" style="display: none;">
             <h2>Who makes Matcha?</h2>
-            <figure><img src="" alt=""></figure>
-            <figcaption></figcaption>
-            <p></p>
-            <p></p>
+            <figure><img src="images/pexels-anna-pou-11.7.23-8329917.jpg" alt="Woman Making Matcha">
+                <figcaption>Woman preparing matcha</figcaption></figure>
+            <p>Higher-grade matcha is mainly produced in Japan.</p>
+            <p>Here are some specific brands that sell matcha:</p>
+            <ul>
+                <li>Ippodo Tea
+                <li>Encha
+                <li>Chamberlain Coffee
+                <li>Chalait Matcha
+                <li>Matcha Konomi
+                <li>Breakaway Matcha
+            </ul>
         </section>
-        <section id="what" style="display: block;">
+        <section id="what" style="display: none;">
             <h2>What is Matcha?</h2>
+            <p>Matcha is green tea leaves finely-grounded into powder. Well, the process is a little more complicated than that, but just know it is a powder.</p>
             <div id="image">
-                <figure><img src="images/dungthuyvunguyen-11.7.23-matcha-2356774_1280.jpg" alt="Matcha"></figure>
-                <figcaption><p>Matcha is green tea leaves finely-grounded into powder.</p></figcaption>
+                <figure><img src="images/dungthuyvunguyen-11.7.23-matcha-2356774_1280.jpg" alt="Matcha Set">
+                <figcaption>Culinary-grade Matcha</figcaption></figure>
             </div>
             <div id="table">
                 <h4>Types of Matcha</h4>
@@ -112,32 +165,33 @@
                 </table>
             </div>
         </section>
-        <section id="when" style="display: block;">
+        <section id="when" style="display: none;">
             <h2>When is a good time to buy matcha?</h2>
-            <figure><img src="" alt=""></figure>
-            <figcaption></figcaption>
+            <figure><img src="images/pexels-eva-bronzini-11.7.23-6833864.jpg" alt="Matcha Pancakes">
+                <figcaption>Matcha Strawberry Pancakes</figcaption></figure>
             <p>Honestly, matcha can get pretty expensive. Typically a 1oz matcha is sold for $22+ depending on where you buy from.</p>
             <p>Based on my experience, a good time to stock up on matcha is around Black Friday/Cyber Monday and Christmas.</p>
         </section>
-        <section id="where" style="display: block;">
+        <section id="where" style="display: none;">
             <h2>Where to buy Matcha?</h2>
-            <figure><img src="" alt=""></figure>
-            <figcaption></figcaption>
+            <figure><img src="images/pexels-charlotte-may-11.7.23-5947112.jpg" alt="Matcha from a Café">
+                <figcaption>Matcha Latte from a Café</figcaption></figure>
             <ul>
                 <li>Amazon - many brands to choose from
                 <li>Chamberlain Coffee - they have different flavors  
-                <li>Starbucks - if you prefer not to make it yourself
+                <li>Cafés - if you prefer not to make it yourself
             </ul>
             <p>There are others, but this is where I usually purchase from.</p>
             <form>
-                Where do you buy matcha? <input id="where-to-buy" type="text">
+                Where do you buy matcha? <input id="where-to-buy" type="text" required>
                 <input id="submit" type="submit" value="Submit">
             </form>
         </section>
-        <section id="how" style="display: block;">
+        <section id="how" style="display: none;">
             <h2>How to make a Matcha latte</h2>
-            <figure><img src="" alt=""></figure>
-            <figcaption></figcaption>
+            <video autoplay muted><source src="images/pexels-anna-pou-11.7.23-8296157 (2160p).mp4" type="video/mp4">
+            Your browser does not support the video.
+            </video>
             <p>Preparing a matcha latte the traditional way:</p>
             <ol>
                 <li>Heat up water (we only need a small amount)
@@ -150,21 +204,23 @@
             </ol>
             <p>An alternative is using an electric handheld whisk instead of the wooden whisk - it works the same.</p>
         </section>
-        <section id="why" style="display: block;">
+        <section id="why" style="display: none;">
             <h2>Why should I drink Matcha?</h2>
-            <figure><img src="" alt=""></figure>
-            <figcaption></figcaption>
-            <p>Benefits of drinking matcha:</p>
+            <figure><img src="images/pexels-charlotte-may-11.7.23-5946668.jpg" alt="Matcha in a Bowl">
+                <figcaption>Matcha in a Bowl</figcaption></figure>
+            <p>According to an article written by Zarafshan Shiraz,</p>
+            <p><a href="https://www.hindustantimes.com/lifestyle/health/benefits-of-drinking-matcha-a-powerful-antioxidant-packed-green-tea-101687589781670.html">Benefits of drinking matcha: A powerful antioxidant-packed green tea</a></p>
+            <p>The benefits of drinking matcha*:</p>
             <ul>
-                <li>
-                <li>
-                <li>
-                <li>
-                <li>
-                <li>
-                <li>
-                <li>
+                <li>Enhanced brain function
+                <li>Enhanced immune function
+                <li>Support for heart health
+                <li>Support liver health
+                <li>Proven to reduce BMI
+                <li>Rich in antioxidants
+                <li>Reduced risk of stomach cancer
             </ul>
+            <p>* Effects vary from person to person and matcha does contain caffeine, so it is important to moderate your consumption of matcha.</p>
         </section>
     </main>
     <footer>
