@@ -85,7 +85,14 @@ fieldset {
 }
 
 #contact-details {
-    padding-top: 50px;
     padding-bottom: 30px;
     padding-left: 0;
+}
+
+form {
+    height: 500px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
