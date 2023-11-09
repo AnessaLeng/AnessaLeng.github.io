@@ -96,3 +96,9 @@ form {
     margin-right: auto;
     display: block;
 }
+
+#reset, #submit {
+    margin-left: auto;
+    margin-right: auto;
+    display: flexbox;
+}
