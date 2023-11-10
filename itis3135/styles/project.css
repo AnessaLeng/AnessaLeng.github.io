@@ -110,3 +110,24 @@ form {
     text-align: center;
     justify-content: space-between;
 }
+
+#dinner, #lunch {
+    background-color: white;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#dinner ul, #lunch ul {
+    list-style: none;
+}
+
+#dinner li span, #lunch li span {
+    text-align: left;
+    justify-content: space-between;
+}
+
+ul li>span.price {
+    text-align: right;
+}
