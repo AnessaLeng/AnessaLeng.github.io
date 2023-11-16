@@ -184,6 +184,25 @@ input[type="submit"], input[type="reset"]{
     padding-right: 25%;
 }
 
+main div.gallery {
+    width: 100%;
+    position: relative;
+}
+
+.slides {
+    display: none;
+}
+
+.preview {
+    opacity: .5;
+}
+
+.active, .preview:hover {
+    opacity: 1;
+}
+
+
+
 @media (min-width: 320px), (max-width: 576px){
     body {
         font-family: 'Tahoma', sans-serif;
