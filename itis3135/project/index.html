@@ -18,20 +18,65 @@
     </header>
     <main>
         <div id="home">
-            
+            <div class="gallery">
+                <div class="slides">
+                    <div class="number">1 / 6</div>
+                    <img src="" alt="">
+                </div>
+                <div class="slides">
+                    <div class="number">2 / 6</div>
+                    <img src="" alt="">
+                </div>
+                <div class="slides">
+                    <div class="number">3 / 6</div>
+                    <img src="" alt="">
+                </div>
+                <div class="slides">
+                    <div class="number">4 / 6</div>
+                    <img src="" alt="">
+                </div>
+                <div class="slides">
+                    <div class="number">5 / 6</div>
+                    <img src="" alt="">
+                </div>
+                <div class="slides">
+                    <div class="number">6 / 6</div>
+                    <img src="" alt="">
+                </div>
+                <a class="previous" onclick="slides(-1)">&#10094;</a>
+                <a class="next" onclick="slides(1)">&#10095;</a>
+                <div class="caption-gallery">
+                    <p id="caption"></p>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img class="preview" src="" onclick="currentSlide(1)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="preview" src="" onclick="currentSlide(2)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="preview" src="" onclick="currentSlide(3)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="preview" src="" onclick="currentSlide(4)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="preview" src="" onclick="currentSlide(5)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="preview" src="" onclick="currentSlide(6)" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="about">
             <h2>About House of Leng</h2>
             <p>Over ten years ago, a brave couple from Cambodia, escaping the terror of civil war, founded a distinctive Chinese restaurant in our city. Their journey, fueled by a shared love for cooking and unwavering hope, led to the transformation of a modest eatery into a cherished local establishment. The restaurant now stands as a beacon of resilience, embodying the triumph over hardship, and the fusion of diverse cultures. Welcome to a dining experience where food speaks the universal language of resilience.</p>
         </div>
-        <div id="menu">
-            <h2>What's Popular?</h2>
-            <div id="menu-links"><a href="menu.html#lunch">Lunch Menu</a>
-            <a href="menu.html#dinner">Dinner Menu</a></div>
-        </div>
         <div id="location">
             <div id="side-left">
-            <h3>Cochran Commons</h3>
+            <h4>Cochran Commons</h4>
                 <figure id="location-map"><a href="https://www.bing.com/maps?q=house+of+leng&FORM=HDRSC6&cp=35.340999%7E-80.764847&lvl=14.5">
                     <img src="../images/house-of-leng-map.png" alt="House of Leng Location"></a>    
                 <figcaption>
@@ -39,7 +84,7 @@
                 </figcaption></figure>       
             </div>
             <div id="side-right">
-            <h3>Restaurant Hours</h3>
+            <h4>Restaurant Hours</h4>
                 <table id="location-hours">
                 <tbody>
                 <tr>
