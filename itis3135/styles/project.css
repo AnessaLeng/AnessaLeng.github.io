@@ -138,13 +138,15 @@ form {
     display: inline-block;
 }
 
-#menu-links {
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
+#lunch {
+    border: solid 0.5px #eaf4f4;
+    color: #eae0d5;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
-#dinner, #lunch {
+#dinner {
     border: solid 0.5px #eaf4f4;
     color: #eae0d5;
     padding-left: 0;
@@ -155,11 +157,6 @@ form {
 
 #lunch ul {
     list-style: none;
-}
-
-#lunch li span {
-    text-align: left;
-    justify-content: space-between;
 }
 
 .price {
