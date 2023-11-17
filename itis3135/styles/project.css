@@ -97,9 +97,16 @@ h3 {
     font-size: 15px;;
 }
 
-.menu-images {
+#lunch .menu-images {
+    width: 30%;
+    height: 20%;
+    float: right;
+    border-radius: 5%;
+}
+
+#dinner .menu-images {
     width: 15%;
-    height: 10%;
+    height: 15%;
     float: right;
     border-radius: 5%;
 }
