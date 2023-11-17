@@ -1,5 +1,5 @@
 footer {
-    border-top: solid 2px black;
+    border-top: double 3px black;
     text-align: center;
     font-size: 15px;
 }
@@ -30,13 +30,14 @@ nav {
     text-align: center;
     align-items: baseline;
     justify-content: space-between;
-    border-bottom: solid 2px black;
+    letter-spacing: 2px;
+    border-bottom: double 3px black;
     padding-bottom: 5px;
 }
 
 a img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     padding-bottom: 2px;
 }
 
@@ -57,11 +58,13 @@ table#location-hours {
 
 h1 {
     padding-bottom: 40px;
+    letter-spacing: 2px;
 }
 
-h3 {
+h2, h3 {
     color: #2C1A1D; 
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
 #dinner h5, #dinner p {
