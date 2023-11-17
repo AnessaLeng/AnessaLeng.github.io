@@ -97,6 +97,13 @@ h3 {
     font-size: 15px;;
 }
 
+.menu-images {
+    width: 20%;
+    height: 25%;
+    float: right;
+    border-radius: 5%;
+}
+
 #side {
     display: flex;
     flex-direction: column;
