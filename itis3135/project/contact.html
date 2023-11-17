@@ -4,53 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/project.css">
-    <title>House of Leng || Make a Reservation</title>
+    <title>House of Leng || Contact</title>
 </head>
 <body>
     <header>
         <nav>
             <a id="company-logo" href="index.html"><img src="../images/house-of-leng-logo.png" alt="Logo"></a>
-            <a href="about.html">About Us</a>
+            <a href="about.html">About</a>
             <a href="menu.html">Menu</a>
             <a href="location.html">Find Us</a>
-            <a href="reservation.html">Make a Reservation</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
     <main>
-        <h2>Make a Reservation</h2>
+        <h2>Contact</h2>
+        <p>We also offer catering to businesses and large events. Please fill out this form so that we may contact you for additional details.</p>
+        <div id="contact-details">
+            <p>Find us at 2712 W. Mallard Creek Church Rd., Charlotte, NC 28262 or call us (704)-510-5081.</p>
+        </div>
         <div id="reservation-form">
             <form>
                 <fieldset><br>
-                    <label for="name">Name: 
-                        <input id="name" type="text" required></label><br>
-                    <label for="email">Email: 
-                        <br><input id="email" type="email" required></label><br>
-                    <label for="phone">Phone Number: 
-                        <br><input id="phone" type="number" required></label><br>
-                    <label for="date">Date: 
+                    <label for="name">
+                        <input id="name" type="text" placeholder="Name" required></label><br>
+                    <label for="email">
+                        <br><input id="email" type="email" placeholder="Email" required></label><br>
+                    <label for="phone">
+                        <br><input id="phone" type="number" placeholder="Phone Number" required></label><br>
+                    <label for="date"> 
                         <br><input id="date" type="date" required></label><br>
-                    <label for="party">Number of guests: 
-                        <br><input id="party" type="number" required></label><br>
-                    <label for="occasion">Occasion: 
+                    <label for="party">
+                        <br><input id="party" type="number" placeholder="How Many People" required></label><br>
+                    <label for="occasion">
                         <br><select id="occasion">
-                            <option value="0">Select One</option>
+                            <option value="0">Select Occasion</option>
                             <option value="1">Birthday</option>
                             <option value="2">Graduation</option>
                             <option value="3">Business Meeting</option>
                             <option value="4">Other</option></select>
                     </label><br>
-                    <label for="comments">Anything else we need to know? 
-                        <br><textarea id="comments"></textarea></label>
+                    <label for="comments">
+                        <br><textarea id="comments" placeholder="Special Requests"></textarea></label>
                 </fieldset><br>
                 <input id="reset" type="reset" value="Reset Form">
-                <input id="submit" type="submit" value="Submit">
+                <input id="submit" type="submit" value="Send">
             </form>
-        </div>
-        <div id="contact-details">
-            <h3>Contact us with any questions you may have.</h3>
-            <p>2712 W. Mallard Creek Church Rd.</p>
-            <p>Charlotte, NC 28262</p>
-            <p>(704)-510-5081</p>
         </div>
     </main>
     <footer>

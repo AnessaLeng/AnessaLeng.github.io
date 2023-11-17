@@ -64,6 +64,18 @@ h3 {
     font-weight: bold;
 }
 
+#dinner h5, #dinner p {
+    margin: 8px;
+}
+
+#dinner h5 {
+    font-size: 17px;;
+}
+
+#dinner p {
+    font-size: 15px;;
+}
+
 #side {
     display: flex;
     flex-direction: column;
