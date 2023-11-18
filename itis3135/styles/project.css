@@ -258,15 +258,7 @@ div.column {
 }
 
 .row {
-    display: flexbox;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+    display: none;
 }
 
 img.preview {
