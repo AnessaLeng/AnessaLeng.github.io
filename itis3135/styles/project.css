@@ -47,6 +47,18 @@ a img {
     padding-bottom: 2px;
 }
 
+figure#owners img, figure#owners figcaption {
+    width: 45%;
+    height: 25%;
+    padding-left: 60%;
+}
+
+figure#owners figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+}
+
 #about p {
     font-size: 20px;
     margin-bottom: auto;
@@ -55,7 +67,7 @@ a img {
 
 #location-map img {
     width: 200px;
-    height: 150px;
+    height: auto;
 }
 
 table#location-hours {
