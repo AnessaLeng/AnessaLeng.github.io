@@ -1,4 +1,4 @@
-/*let form = document.getElementById('company-name');
+let form = document.getElementById('company-name');
 
 window.onload = function() {
     var buttons = ['click-to-reserve'];
@@ -8,16 +8,17 @@ window.onload = function() {
         }
     });
 }
-
+/*
 form.addEventListener('a', (e) => {
     e.preventDefault();
 
 
 });
-
+*/
 function reservation() {
+    alert("Go to Contact on the nav bar!");
+}
 
-}*/
 
 let slideIndex = 1;
 showSlides(slideIndex);

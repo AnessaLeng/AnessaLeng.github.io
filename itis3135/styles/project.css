@@ -61,8 +61,7 @@ figure#owners figcaption {
 
 #about p {
     font-size: 20px;
-    margin-bottom: auto;
-    float: right;
+    margin-bottom: 50px;
 }
 
 #location-map img {
