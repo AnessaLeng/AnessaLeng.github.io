@@ -189,22 +189,78 @@ ul#checklist li {
 }
 
 main div.gallery {
-    width: 100%;
     position: relative;
+    box-sizing: border-box;
+}
+
+div.gallery div.slides>img {
+    margin-top: 0;
+    vertical-align: middle;
+    width: 500px;
+    height: auto;
+}
+
+div.column {
+    flex: 1;
+}
+
+.previous, .next {
+    cursor: pointer;
+    position: relative;
+    top: 40%;
+    width: 25%;
+    padding: 0;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.previous:hover, .next:hover {
+    background-color: rgb(171, 68, 219);
+    opacity: 80%;
+    text-decoration: none;
+}
+
+.number {
+    margin-top: 20px;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding-left: 25%;
+    position: absolute;
+    top: 0;
 }
 
 .slides {
     display: none;
 }
 
-.preview {
+.caption-gallery {
+    text-align: center;
+    padding-left: 28%;
+    color: white;
+}
+
+.row {
+    display: none;
+}
+
+img.preview {
     opacity: .5;
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
 }
 
 .active, .preview:hover {
     opacity: 1;
 }
-
 
 
 @media (min-width: 320px), (max-width: 576px){
