@@ -217,8 +217,12 @@ div.column {
     border-radius: 0 3px 3px 0;
 }
 
+.previous {
+    left: 20%;
+}
+
 .next {
-    right: 0;
+    right: 20%;
     border-radius: 0 3px 3px 0;
 }
 
