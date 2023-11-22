@@ -206,9 +206,9 @@ div.column {
 
 .previous, .next {
     cursor: pointer;
-    position: relative;
+    position: absolute;
     top: 40%;
-    width: 25%;
+    width: 0%;
     padding: 0;
     margin-top: 10px;
     color: white;
@@ -232,7 +232,7 @@ div.column {
     margin-top: 20px;
     color: #f2f2f2;
     font-size: 12px;
-    padding-left: 25%;
+    padding-left: 28%;
     position: absolute;
     top: 0;
 }
@@ -243,7 +243,7 @@ div.column {
 
 .caption-gallery {
     text-align: center;
-    padding-left: 28%;
+    padding-left: 30%;
     color: white;
 }
 
