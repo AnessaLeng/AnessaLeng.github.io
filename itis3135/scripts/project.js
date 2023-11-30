@@ -19,6 +19,10 @@ function reservation() {
     alert("Go to Contact on the nav bar!");
 }
 
+function submit() {
+    alert("Thank you! We will get back to you within 48 hours.");
+}
+
 
 let slideIndex = 1;
 showSlides(slideIndex);
