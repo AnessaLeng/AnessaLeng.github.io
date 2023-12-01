@@ -29,6 +29,40 @@ window.onload = function() {
     });
 }
 
+function reservation() {
+    alert("Go to Contact on the nav bar!");
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function slides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  let dots = document.getElementsByClassName("preview");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+
 document.getElementById('date').onchange = function() {
   var input = new Date(this.value);
   if (input < new Date()) {
@@ -62,36 +96,3 @@ document.getElementById('reservation-form').addEventListener('submit', function(
 
   alert("Thank you, " + username + "! A confirmation will be sent via " + email + " within 48 hours. If we need more details then you'll receive a call at " + phone + " from one of our managers.");
 });
-
-function reservation() {
-    alert("Go to Contact on the nav bar!");
-}
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function slides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slides");
-  let dots = document.getElementsByClassName("preview");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
