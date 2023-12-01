@@ -169,6 +169,14 @@ fieldset {
     border: solid .5px #eaf4f4;
 }
 
+#default-page {
+    display: block;
+}
+
+#submitted-form {
+    display: none;
+}
+
 #reservation-form {
     text-align: left;
     padding-left: 35%;

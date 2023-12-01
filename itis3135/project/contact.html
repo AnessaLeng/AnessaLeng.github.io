@@ -17,6 +17,7 @@
         </nav>
     </header>
     <main>
+    <div id="default-page">
         <h2>Contact</h2>
         <p>We also offer catering to businesses and large events. Please fill out this form so that we may contact you for additional details.</p>
         <div id="contact-details">
@@ -32,9 +33,9 @@
                     <label for="phone">
                         <br><input id="phone" type="number" placeholder="Phone Number" required></label><br>
                     <label for="date"> 
-                        <br><input id="date" type="datetime-local" required></label><br>
+                        <br><input id="date" type="datetime-local" min="0000-00-00" required></label><br>
                     <label for="party">
-                        <br><input id="party" type="number" placeholder="How Many People" required></label><br>
+                        <br><input id="party" type="number" placeholder="How Many People" min="2" required></label><br>
                     <label for="occasion">
                         <br><select id="occasion">
                             <option value="0">Select Occasion</option>
@@ -47,9 +48,22 @@
                         <br><textarea id="comments" placeholder="Special Requests"></textarea></label>
                 </fieldset><br>
                 <input id="reset" type="reset" value="Reset Form">
-                <input id="submit" type="submit" value="Send" onclick="submit()">
+                <input id="submit" type="submit" value="Send">
             </form>
         </div>
+    </div>
+    <div id="submitted-form">
+        <h3>Successfully Submitted!</h3>   
+        <h4>Here are the details:</h4>  
+        <p>Name: <span id="submitted-name"></span></p>   
+        <p>Email: <span id="submitted-email"></span></p>  
+        <p>Phone Number: <span id="submitted-phone"></span></p>  
+        <p>Date and Time: <span id="submitted-date"></span></p>  
+        <p>How Many: <span id="submitted-party"></span> people</p>  
+        <p>Occasion: <span id="submitted-occasion"></span></p>  
+        <p>Comments: <span id="submitted-comments"></span></p>
+        <br><br>  
+    </div>
     </main>
     <footer>
         <p>Designed by <a href="../lenginc.co/index.html">Leng Inc.</a>, <a href="https://www.freecodecamp.org/certification/AnessaLeng/responsive-web-design">Certified Front End Development</a> © 2023</p>
