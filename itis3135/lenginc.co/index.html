@@ -18,56 +18,70 @@
         }
 
         .subtitle {
-            text-align: left;
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
             font-family: 'Tahoma';
         }
 
         h2 {
-            font-size: 25px !important;
-            font-family: 'serif', sans-serif !important;
+            font-size: 28px;
+            font-family: 'serif', sans-serif;
         }
 
-        p, ul {
-            text-align: left !important;
+        footer p {
+            font-family: 'sans-serif';
+            padding-top: 50px;
+            padding-left: 10%;
+            padding-right: 10%;
         }
 
         main > h1 {
-            text-align: left;
-            flex-wrap: wrap;
-            align-items: left;
-            font-size: 25px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        main > h1>img {
+            text-align: center;
+            border-radius: 100%;
         }
 
         h3 {
-            font-size: 20px;
+            font-size: 25px;
         }
 
         body { 
             font-family: 'Tahoma', sans-serif;
             font-size: 18px;
-            background: linear-gradient(hsl(0, 100%, 95%), #C9D2FC);
-            background-attachment: fixed;
-            color: #172A3A; 
+            background: rgb(18, 24, 29);
+            color: #eeeeee; 
             text-align: center;
+            border-left: solid 70px #eeeeee;
+            border-right: solid 70px #eeeeee;
             padding-top: 40px;
+            padding-left: 28%;
+            padding-right: 25%;
             padding-bottom: 10px;
             border-bottom: 100px;
         }
 
-        footer {
-            font-family: 'sans-serif';
-            border-bottom: 200px;
-            padding-top: 100px;
-            padding-bottom: 0;
+        body p {
+            text-align: left !important;
         }
 
         a {
-            color: #bc91d8;
+            color: rgb(151, 245, 117);
             text-decoration: none;
+            font-size: 20px;
+        }
+
+        a:hover {
+            border: solid 1px #eeeeee;
         }
 
         img {
-            border-radius: 100%;
             width: 90px;
             height: 60px;
         }
@@ -75,29 +89,24 @@
 </head>
 <body>
     <header>
-        <h1 class="title">Anessa Leng's Amber Lion || ITIS 3135</h1>
+        <h1 class="title" id="home">Anessa Leng's Amber Lion || ITIS 3135</h1>
         <nav>
-            <a href="../index.html">Home</a> 
-            || 
-            <a href="../introduction.html">Introduction</a> 
-            || 
-            <a href="../contract.html">Contract</a> 
-            || 
-            <a href="../tables.html">Tables</a>
-            || 
-            <a href="../forms.html">Forms</a>
-            || 
-            <a href="../website_evaluations.html">Website Evaluations</a>
-            || 
-            <a href="../firstscripts.html">First Scripts</a>
-            || 
-            <a href="https://webpages.charlotte.edu/aleng/">UNCC Homepage</a>
+            🐼
+            <a href="#home">Home</a>
+            🐼
+            <a href="#who">Who</a>
+            🐼
+            <a href="#what">What</a>
+            🐼
+            <a href="#why">Why</a>
+            🐼
+            <a href="#contact">Contact</a>
         </nav>
     </header>
     <main>
-        <h2>Leng Incorporate</h2>
-        <h1><img src="../images/leng.jpg" alt="">Leng Incorporate</h1>
-        <h3 class="subtitle">Who we are</h3>
+        <h2><img src="../images/leng.jpg" alt="Logo">Leng Incorporate</h2>
+        <h1>We can make anything possible!</h1>
+        <h3 class="subtitle" id="who">Who we are</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Nullam maximus ante eu porttitor fermentum. Phasellus sit amet tempus mi. 
             Quisque sed elit volutpat, dictum lorem vitae, sollicitudin elit. 
@@ -110,7 +119,7 @@
             Donec a posuere est. Proin bibendum leo a magna tincidunt, at iaculis ipsum consequat. 
             Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
         </p>
-        <h3 class="subtitle">What we do</h3>
+        <h3 class="subtitle" id="what">What we do</h3>
         <ul>
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             <li>Donec eu nisi vitae mauris laoreet ultrices ut vel ante.
@@ -118,16 +127,11 @@
             <li>Sed accumsan nisi aliquet ipsum ullamcorper molestie.
             <li>Morbi eget orci ac dui accumsan semper eget nec elit.
         </ul>
-        <h3 class="subtitle">Why you need us</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum et urna et fermentum. 
-            Cras sit amet pharetra nisl. Donec consequat blandit lectus id scelerisque. 
-            Mauris gravida magna quis interdum placerat. Quisque eget lobortis dolor. 
-            Curabitur nisl tellus, mollis sit amet orci id, malesuada malesuada neque. 
-            Aenean quis sollicitudin magna. Sed cursus ornare dictum. Nam pellentesque erat nec tellus volutpat porttitor. 
-            Nam ullamcorper nunc vel lorem egestas, a iaculis velit aliquet. Aliquam nec pellentesque justo, et placerat mi.
+        <h3 class="subtitle" id="why">Why you need us</h3>
+        <p>
         </p>
         <div>
-            <h3 class="subtitle">Contact Information</h3>
+            <h3 class="subtitle" id="contact">Contact Information</h3>
             <p>support@lenginc.com</p>
             <p>1234 Industry Ln</p>
             <p>Charlotte, NC 12341</p>
@@ -135,7 +139,7 @@
         </div>
     </main>
     <footer>
-        <p>Page created by Leng Inc., <a href="https://www.freecodecamp.org/certification/AnessaLeng/responsive-web-design">Certified in JS</a> © 2023</p>
+        <p>Page created by Leng Inc., <a href="https://www.freecodecamp.org/certification/AnessaLeng/responsive-web-design">Certified Front End Development</a> © 2023</p>
         <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
             <img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
         </a>
