@@ -5,11 +5,11 @@ window.onload = function() {
   let slideIndex = 1;
   showSlides(slideIndex);
 
-  function slides(n) {
+  window.slides = function(n) {
     showSlides(slideIndex += n);
   }
 
-  function currentSlide(n) {
+  window.currentSlide = function(n) {
     showSlides(slideIndex = n);
   }
 
