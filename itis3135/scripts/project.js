@@ -50,6 +50,16 @@ window.onload = function() {
     today = year + '-' + month + '-' + day + '\n' + hours + ':' + minutes;
     reservation_form.getElementById('date').min = today;
 
+    var phoneNumber = document.getElementById('phone');
+    
+    phoneNumber.addEventListener('input', function() {
+      var regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
+      
+      if (!regex.test(phoneNumber.value)) {
+        alert('Invalid phone number!');
+      }
+    });
+
     var buttons = ['click-to-reserve'];
     buttons.forEach(function(button) {
         if(button == 'click-to-reserve') {
