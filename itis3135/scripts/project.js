@@ -50,16 +50,6 @@ window.onload = function() {
     today = year + '-' + month + '-' + day + '\n' + hours + ':' + minutes;
     reservation_form.getElementById('date').min = today;
 
-    var phoneNumber = document.getElementById('phone');
-    
-    phoneNumber.addEventListener('input', function() {
-      var regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
-      
-      if (!regex.test(phoneNumber.value)) {
-        alert('Invalid phone number!');
-      }
-    });
-
     var buttons = ['click-to-reserve'];
     buttons.forEach(function(button) {
         if(button == 'click-to-reserve') {
@@ -78,6 +68,16 @@ document.getElementById('date').onchange = function() {
     alert("The selected date already passed!");
     this.value = '';
   } 
+}
+
+document.getElementById('phone').onchange = function() {
+  var input = document.getElementById('phone').value;
+  var regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
+      
+    if (!regex.test(input)) {
+      alert('Invalid phone number!');
+      this.value = '';
+    } 
 }
 
 document.getElementById('reservation-form').addEventListener('submit', function(event) {
