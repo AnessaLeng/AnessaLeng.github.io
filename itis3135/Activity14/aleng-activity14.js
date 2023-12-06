@@ -1,15 +1,18 @@
 $(document).ready(function() {
-	$(aside > nav > a).on('click', function(e) {
+	$('#nav_list a').onclick(function(e) {
         e.preventDefault();
 
-        var json = $(this).attr('title') + '.json';
+        var speaker = $(this).attr('title');
+        var speakerJSON = speaker + '.json';
 
-        $.getJSON(json, function(speakers) {
-            var html = '<h3>' + speakers.speaker + '</h3>';
-            html += '<img src="' + speakers.image + '" alt="' + speakers.speaker + '">';
-            html += '<p>' + speakers.text + '</p>';
+        $.getJSON(speakerJSON, function(data) {
+            var html = '<h1>' + data.title + '</h1>';
+            html += '<h2>' + data.month + '</h2>';
+            html += '<h3>' + data.speaker + '</h3>';
+            html += '<img src="' + data.image + '" alt="' + data.speaker + '_picture">';
+            html += '<p>' + data.text + '</p>';
 
-            $(main).html(html);
+            $('main').html(html);
         });
     });
 }); // end ready
