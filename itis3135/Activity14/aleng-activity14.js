@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('#nav_list a').onclick(function(e) {
+	$('#nav_list a').click(function(e) {
         e.preventDefault();
 
         var speaker = $(this).attr('title');
