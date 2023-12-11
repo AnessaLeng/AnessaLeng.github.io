@@ -59,9 +59,17 @@ figure#owners figcaption {
     font-size: 15px;
 }
 
+p {
+    line-height: 30px;
+}
+
 #about p {
     font-size: 20px;
     margin-bottom: 50px;
+}
+
+#info {
+    padding-left: 25%;
 }
 
 #location-map img {
