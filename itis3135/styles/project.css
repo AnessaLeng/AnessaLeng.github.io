@@ -81,6 +81,7 @@ table#location-hours {
 h1 {
     padding-bottom: 40px;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 h2 {
@@ -88,6 +89,7 @@ h2 {
     color: #eae0d5; 
     font-weight: bold;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 h3 {
